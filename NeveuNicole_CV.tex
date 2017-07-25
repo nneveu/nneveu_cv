@@ -19,9 +19,10 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{multibib}
 
 % personal data
 \name{Nicole}{Neveu}
@@ -35,7 +36,7 @@
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -55,8 +56,8 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2013--Present}{Ph.D Candidate in Physics}{Illinois Institute of Technology}{Chicago}{}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{2009--2013}{B.S. Electrical Engineering}{University of Houston}{Houston}{}{}
+\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
 \section{Ph.D thesis}
 \cvitem{title}{\emph{Title}}
@@ -64,44 +65,69 @@
 \cvitem{description}{Short thesis abstract}
 
 \section{Research Experience}
-\cventry{year--year}{Job title}{Argonne National Laboratory}{Lemont, IL}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
+\cventry{Lemont, IL}{Argonne National Laboratory}{Graduate Student, Argonne Wakefield Accelerator}{2013--Present}{}{Design, optimization, and simulation of rf photoinjectors (witness and drive at AWA) using OPAL-T.\newline
+Experimental validation of results.Completed and ongoing work includes:
 \begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
+\item Simulation:
   \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
+  \item TBA drive beam line design  
+  \item High charge linac optimization
+  \item Optical Transistion Radiation (OTR) on witness beam line
+  \item Thermionic RF gun designed by Euclid TechLabs
   \end{itemize}
-\item Achievement 3.
+\item Experimental and hardware:
+  \begin{itemize}
+   	\item 40nC linac emittance and bunch length measurements.
+   	\item Intensity improvement of UV laser pulse train 
+   	\item UV multisplitter assembly and characterization
+   	\item Design of relay imaging transport system for drive beam line.
+  \end{itemize}
 \end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+
+\section{Publications}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{refproc}                   % 'publications' is the name of a BibTeX file
+%\subsection{Journal Articles}
+\subsection{Refereed Proceedings}
+\subsection{Submitted Proceedings}
 
 \section{Research Presentations}
 \subsection{Invited Conference} %Workshops, Symposium
+\textbf{Study of space charge dominated beams at the AWA rf photoinjector}\newline
+Space Charge 2017, Darmstadt, Germany. Oct. 2017
 %\subsection{Seminar and Colloquia}
 \subsection{Other Talks}
-\cventry{May 23, 2017}{Beam Dynamics palaver, Paul Scherrer Institute}{Photoinjector simulations using OPAL-t for the Argonne Wakefield Accelerator}{Villigen, Switzerland}{}{}%}
+\textbf{Photoinjector simulations using OPAL-t for the Argonne Wakefield Accelerator}\newline
+Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
 
-\cventry{May 17, 2016}{Young Scientist Symposium, HEP ANL}{Research at the Argonne Wakefield Accelerator}{Lemont,IL}{}{}%}
+\textbf{Research at the Argonne Wakefield Accelerator}\newline
+Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016 
 
-\cventry{April 28, 2016}{Center for Accelerator and Particle Physics, IIT}{Two Beam Acceleration at the Argonne Wakefield Accelerator}{Chicago,IL}{}{}%}
+\textbf{Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
+Center for Accelerator and Particle Physics, IIT, Chicago, IL. April 28, 2016 
 
 
 \section{Teaching}
-\cventry{July 2017}{TA, Technical English}{Institute of Modern Physics}{Lanzhou, China}{}{Content reviewer for conference style presentations.\newline{}}%}
+\cventry{Lanzhou, China}{TA, Technical English}{Institute of Modern Physics}{July 2017}{}{}%}
 
-\cventry{June-July 2015--2017}{TA, Technical English}{Tsinghua University}{Beijing, China}{}{}%}
+\cventry{Beijing, China}{TA, Technical English}{Tsinghua University}{June-July 2015--2017}{}{}%}
 
-\cventry{June 2015}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS}{New Brunswick, NJ}{}{Hosted by Rutgers University\newline{}}
+\cventry{New Brunswick, NJ}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Rutgers University}{June 2015}{}{}
 
-\cventry{2013--2015}{TA, EM \& Instrumentation Laboratory}{Illinois Institute of Technology}{Chicago, IL}{}{}
+\cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
 \section{Programming Languages}
 \cvitem{Proficient in}{Python, OPAL-T, Matlab}
@@ -119,21 +145,6 @@ Detailed achievements:%
   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
 \end{cvcolumns}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 \clearpage
 %-----       letter       ---------------------------------------------------------
