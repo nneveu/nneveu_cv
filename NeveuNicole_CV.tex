@@ -22,7 +22,6 @@
 \usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-\usepackage{multibib}
 
 % personal data
 \name{Nicole}{Neveu}
@@ -45,8 +44,9 @@
 %\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 % bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\usepackage[resetlabels,labeled]{multibib}
+\newcites{proc}{Other Proceedings}
+\newcites{refproc}{Refereed Proceedings}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -59,25 +59,28 @@
 \cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
+\iffalse
 \section{Ph.D thesis}
 \cvitem{title}{\emph{Title}}
 \cvitem{supervisors}{Linda Spentzouris, John Power}
 \cvitem{description}{Short thesis abstract}
+\fi
 
 \section{Research Experience}
-\cventry{Lemont, IL}{Argonne National Laboratory}{Graduate Student, Argonne Wakefield Accelerator}{2013--Present}{}{Design, optimization, and simulation of rf photoinjectors (witness and drive at AWA) using OPAL-T.\newline
-Experimental validation of results.Completed and ongoing work includes:
+\cventry{Lemont, IL}{Argonne National Laboratory}{Graduate Student, Argonne Wakefield Accelerator}{2013--Present}{}{Design, optimization, and simulation of rf photoinjectors at AWA using OPAL-t.\newline
+Experimental validation of results. Completed and ongoing work includes:
 \begin{itemize}%
-\item Simulation:
+\item Simulations:
   \begin{itemize}%
-  \item TBA drive beam line design  
-  \item High charge linac optimization
-  \item Optical Transistion Radiation (OTR) on witness beam line
-  \item Thermionic RF gun designed by Euclid TechLabs
+  \item TBA beam line design  
+  \item High charge linac optimization (40 nC)
+  \item Optical Transistion Radiation (OTR) at 1nC
+  \item Thermionic RF gun, designed by Euclid TechLabs
   \end{itemize}
 \item Experimental and hardware:
   \begin{itemize}
-   	\item 40nC linac emittance and bunch length measurements.
+  	\item Beam size, charge, and energy measurements
+   	%\item 40nC linac emittance and bunch length measurements.
    	\item Intensity improvement of UV laser pulse train 
    	\item UV multisplitter assembly and characterization
    	\item Design of relay imaging transport system for drive beam line.
@@ -92,25 +95,25 @@ Experimental validation of results.Completed and ongoing work includes:
 %\bibliographystyle{plain}
 %\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{refproc}                   % 'publications' is the name of a BibTeX file
-%\subsection{Journal Articles}
-\subsection{Refereed Proceedings}
-doi :10.1088/1742-6596/874/1/012062
-\subsection{Submitted Proceedings}
+\nociterefproc{*}
+\bibliographystylerefproc{plain}
+\bibliographyrefproc{./cvparts/refproc}
+%doi :10.1088/1742-6596/874/1/012062
+%\subsection{Submitted Proceedings}
+\nociteproc{*}
+\bibliographystyleproc{plain}
+\bibliographyproc{./cvparts/proceedings}
+
+
 
 \section{Research Presentations}
+\iffalse
 \subsection{Invited Conference} %Workshops, Symposium
 \textbf{Study of space charge dominated beams at the AWA rf photoinjector}\newline
 Space Charge 2017, Darmstadt, Germany. Oct. 2017
+\fi
 %\subsection{Seminar and Colloquia}
-\subsection{Other Talks}
+%\subsection{Other Talks}
 \textbf{Photoinjector simulations using OPAL-t for the Argonne Wakefield Accelerator}\newline
 Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
 
@@ -124,7 +127,7 @@ Center for Accelerator and Particle Physics, IIT, Chicago, IL. April 28, 2016
 \section{Teaching}
 \cventry{Lanzhou, China}{TA, Technical English}{Institute of Modern Physics}{July 2017}{}{}%}
 
-\cventry{Beijing, China}{TA, Technical English}{Tsinghua University}{June-July 2015--2017}{}{}%}
+\cventry{Beijing, China}{TA, Technical English}{Tsinghua University}{June 2015--2017}{}{}%}
 
 \cventry{New Brunswick, NJ}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Rutgers University}{June 2015}{}{}
 
@@ -139,33 +142,46 @@ Center for Accelerator and Particle Physics, IIT, Chicago, IL. April 28, 2016
 \cvlistdoubleitem{Society of Women Engineers}{}
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
+\iffalse
 \section{References}
 \begin{cvcolumns}
   \cvcolumn{Category 1}{\begin{itemize}\item Linda Spentzouris \item John Power \item Larry Pinsky \end{itemize}}
   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
 \end{cvcolumns}
+\fi
 
 
 \clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
+\recipient{USPAS}{Fermilab, MS 125\\Kirk Rd \& Wilson St.\\Batavia, IL  60510}
+\date{August 15, 2017}
 \opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
+\closing{Thank you,}
 \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+I can not exaggerate the positive impact that USPAS has had on my graduate eduction and training, 
+as each class provided crucial information that expanded my knowledge of accelerator physics. 
+USPAS is unique in that it offers education in 
+topics that can not be found at any university, and the lab intensive classes offer hands on training 
+that is hard to come by. In addition to spectacular classes, every breakfast, lunch, homework session, 
+and break is an opportunity to exchange ideas with scientist and engineers from labs across the country and the world.
+These interactions, in combination with the course work, help me keep updated with what is going on in the field.
+It can also be a time to learn some interesting history!
 
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-Albert Einstein discovered that $e=mc^2$ in 1905.
-
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+It is exciting to bring those ideas, new and old, back to my group at the 
+Argonne Wakefield Accelerator (AWA) facility. As a PhD student, I started full time at the AWA 
+after two years of classes. I then spent the next two years doing photoinjector 
+simulations and experiments for the two electron beam lines at the AWA. 
+I've also done some UV optics work in order to improve the charge distribution in our bunch trains. 
+The impact of USPAS classes in my work is tangible. The information and resources (those books are great!) 
+I acquired at USPAS have helped me find insight in my simulations, understand our timing and rf systems better, 
+and appreciate the difficulty of maintaining a pristine vacuum as most facilities do. This information has helped me 
+as I design a beam line for upcoming two beam acceleration experiments, as I work on our UV laser, and while
+talking to vendors. USPAS has given me training in content and skills that are critical for anyone working
+at an accelerator facility, and I hope to continue learning from this invaluable program.
 
 \makeletterclosing
 
