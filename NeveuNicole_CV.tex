@@ -45,11 +45,11 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
-\newcites{proc}{Other Proceedings}
+\newcites{proc}{Proceedings}
 \newcites{refproc}{Refereed Proceedings}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+\newcites{inprog}{Publications in Progress}
+%--------------------------------------------------------------------------------
+
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
@@ -59,34 +59,45 @@
 \cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
-\iffalse
-\section{Ph.D thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Linda Spentzouris, John Power}
-\cvitem{description}{Short thesis abstract}
-\fi
+\section{Ph.D Thesis}
+\cvitem{Title}{\emph{Design for Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
+\cvitem{Advisors}{Linda Spentzouris, John Power}
+\cvitem{Summary}{
+	Staged two beam acceleration using dielectric structures has yet to 
+	be achieved anywhere in the world. In this thesis, I discuss beam 
+	line design, simulation, and optimization, of a 
+	beam line with the potential for dielectric two beam acceleration.
+    Preliminary and prepratory experimental measurements
+    are included.    }
+
 
 \section{Research Experience}
-\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{Design, optimization, and simulation of rf photoinjectors at AWA using OPAL-t.\newline
+\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{
+Design, optimization, and simulation of rf photoinjectors at AWA using OPAL-t.\newline
 Experimental validation of results. Completed and ongoing work includes:
 \begin{itemize}%
-\item Simulations:
-  \begin{itemize}%
-  \item Two beam acceleration (TBA) beam line design  
-  \item High charge linac optimization (40 nC)
-  \item Optical Transistion Radiation (OTR) at 1nC
-  \item Thermionic RF gun, designed by Euclid TechLabs
-  \end{itemize}
-\item Experimental and hardware:
-  \begin{itemize}
-  	\item Beam size, charge, and energy measurements
-   	\item 40nC linac emittance and bunch length measurements.
-   	\item Intensity improvement of UV laser pulse train 
-   	\item UV multisplitter assembly and characterization
-   	\item Design of relay imaging transport system for drive beam line.
-  \end{itemize}
-\end{itemize}}
-
+	\item Simulations and Software:
+	\begin{itemize}%
+		\item Two beam acceleration (TBA) beam line design  
+		\item Installed OPAL-T on two Linux clusters at ANL: Bebop and Theta
+		\item Wrote beam image processing script in python.
+		\item High charge linac optimization (40 nC).
+		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms.
+		\item Wrote optimization scripts in python using nlopt package.
+		\item Optical Transistion Radiation (OTR) at 1nC
+		\item Thermionic RF gun, designed by Euclid TechLabs
+	\end{itemize}
+	\item Experimental and hardware:
+	\begin{itemize}%		
+		\item Beam size, charge, and energy measurements
+		\item RF power measurements for linac tanks and gun.
+		\item 40nC linac emittance and bunch length measurements.
+		\item Intensity improvement of UV laser pulse train 
+		\item UV multisplitter assembly and characterization
+		\item Design of relay imaging transport system for drive beam line.
+	\end{itemize}
+\end{itemize}
+}
 \section{Publications}
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -103,8 +114,6 @@ Experimental validation of results. Completed and ongoing work includes:
 \nociteproc{*}
 \bibliographystyleproc{ieeetr}
 \bibliographyproc{./cvparts/proceedings}
-
-
 
 \section{Research Presentations}
 
@@ -127,7 +136,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 
 \section{Teaching}
-\cventry{East Lansing, MI}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
+\cventry{East Lansing, MI}{Co-instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
 
 \cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
 
@@ -140,21 +149,30 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
 \section{Awards}
+\cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{Dircetor's Discretionary Allocation}{ 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2017 in Denmark.}{IPAC 2017 Travel Award}{May 2017}{}{}%}
 \cventry{}{Funds granted to attend a short course on beam dynamics at NAPAC 2016.}{Phelps Grant Award}{Nov 2016}{}{}%}
 \cventry{}{One year grant funded by DOE; for TBA work done at ANL.}{Science Graduate Student Research Award}{2015--2016}{}{}%}
 
+\section{Programming Languages}
+\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
+
+\section{USPAS Courses Taken}
+\begin{itemize}
+	\item {Microwave Measurements and Beam Instrumentation}
+	\item {Fundamentals of Timing and Synchronization}
+	\item {Vacuum Science and Technology}
+	\item {Accelerator Physics Using Maple}
+\end{itemize}
+
+
 \section{Recent Volunteer work}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
 \cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist}{Oct 2017}{}{}
+\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 
-
-
-\section{Programming Languages}
-\cvitem{Proficient in}{OPAL-T, Python, Matlab}
-\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}
 
 \section{Memberships}
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
