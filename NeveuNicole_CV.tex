@@ -15,27 +15,19 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{hyperref}
 
 % adjust the page margins
 \usepackage[margin=0.7in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-% personal data
-\name{Nicole}{Neveu}
-\title{CV}                               % optional, remove / comment the line if not wanted
-\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted
-\phone[fixed]{+1~(630)~252~7333}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{nneveu@anl.gov}                               % optional, remove / comment the line if not wanted
-\email{nneveu@hawk.iit.edu}
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+                           
+%\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}
+%\phone[fixed]{+1~(630)~252~7333}                               
+%\email{nneveu@hawk.iit.edu}
+%\homepage{www.johndoe.com}                         
+%\quote{Some quote}                                 
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -45,20 +37,93 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
-\newcites{proc}{Proceedings}
-\newcites{refproc}{Refereed Proceedings}
 \newcites{inprog}{Publications in Progress}
+\newcites{refproc}{Refereed Proceedings}
+\newcites{proc}{Proceedings}
+
 %--------------------------------------------------------------------------------
+\name{Nicole}{Neveu}
+\extrainfo{PhD Candidate, Illinois Institute of Technology}
 
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+
+
+\recipient{ATPESC Statement of Purpose}{}
+\date{March 15, 2018}
+\opening{To whom it may concern,}
+\closing{Thank you,}
+\enclosure[Attached]{curriculum vit\ae{}}          
+
+\makelettertitle
+
+As a graduate student in the Argonne Wakefield Accelerator group, 
+I spend the majority of my time modeling complex and dynamic particle accelerators on 
+Bebop, a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) at ANL. 
+Prior to Bebop, I was using it's predecessor Blues, and more recently, 
+my colleagues and I were rewarded a 2 million core hour Director's Discretionary 
+allocation to extend our work on Theta, 
+an Argonne Leadership Computing Facility (ALCF) machine. 
+
+In all of my work on these machines, I use the parallel, open source, and 
+3D Particle-in-cell code OPAL-T. 
+This code was chosen for several reasons, the most important being the ability 
+to model space charge effects in 3D. At the AWA, high charge experiments are unique
+in that space charge is a dominating nonlinear effect. This is a regime that most 
+particle accelerator facilities avoid due to the detrimental effects on the beam.
+However, there are a class of experiments that can benefit from high charge bunches 
+if modeled and controlled with some degree of accuracy. This is the goal of my research
+at the AWA, to understand and optimize machine parameters for 
+this non-linear regime. This in combination with other higher order collective 
+effects that machines everywhere must deal with, such as non-linearities in field maps of 
+magnets or radio-frequency cavities, non-uniform distributions of the particles as they 
+leave the source, and energy loss through bending elements which effect the trajectories downstream. 
+
+There are two main types of simulations I carry out on these machines; 
+low to mid fidelity large scale ensemble simulations for accelerator optimization,
+and the mid to high fidelity simulations for comparison to experiments. 
+Dimensionality in the optimization work can range from as little as 2 or 3 parameters 
+to 10's of parameters, which creates a large search space. Most of this work is carried
+out using OPAL-T in combination with parallel python code developed by Jeff Larson (ANL) 
+and others in the library libEnsemble. These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job. Consider a 1,000 point random sample done for probing a 5-D parameter space; I start hundreds of low fidelity 8 core OPAL jobs on a large allocation.
+As one OPAL simulation is finished (scale of few minutes) a new one is started.
+In this way, we can create the large simulation data sets needed for surrogate models or optimization in a reasonable amount of time. 
+
+The work on Theta focuses on high fidelity simulations, 
+including scaling studies and preparations for a 1:1 simulations
+ (40 billion particles) in collaboration with the UCLA plasma wakefield group. 
+ In the case of plasma wakefield simulations, high fidelity simulations are 
+ required to reach the level of statistics needed to resolve the plasma behavior.
+ We would also like to optimize for KNL, so that the high fidelity simulations
+ are more efficient. This requires updates to the FFT, particle push routine, and
+ other aspects of the code. If reasonble scaling can be achieved this 
+ ground work will be used as foundation for an INCITE proposal next year.
+ 
+ While I have learn much about HPC systems and research through collaboration and 
+ day to day research activities, as a Physics and first engineering student, 
+ I would like the opportunity to learn about CS\&E research in a structured setting.
+ I think I would benefit from the exposure to CS concepts from a CS point of view.
+
+
+\makeletterclosing
+
+
+\clearpage
+
+\name{Nicole}{Neveu}
+\title{CV}                               % optional, remove / comment the line if not wanted
+\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(234)~567~890}                  
+\phone[fixed]{+1~(630)~252~7333}                   
+%\phone[fax]{+3~(456)~789~012}                                                  
+\email{nneveu@hawk.iit.edu}
+\extrainfo{nneveu@anl.gov}
 \makecvtitle
 
 \section{Education}
 \cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
+\iffalse
 \section{Ph.D Thesis}
 \cvitem{Title}{\emph{Design for Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
 \cvitem{Advisors}{Linda Spentzouris, John Power}
@@ -69,25 +134,26 @@
 	beam line with the potential for dielectric two beam acceleration.
     Preliminary and prepratory experimental measurements
     are included.    }
-
+\fi
 
 \section{Research Experience}
 \cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{
-Design, optimization, and simulation of rf photoinjectors at AWA using OPAL-t.\newline
-Experimental validation of results. Completed and ongoing work includes:
+Design, optimization, and simulation of rf photoinjectors at AWA using \newline 
+the accelerator physics PIC code, OPAL-T, and experimental validation of results. \newline Completed and ongoing work includes:
 \begin{itemize}%
-	\item Simulations and Software:
+	\item Simulations:
 	\begin{itemize}%
-		\item Two beam acceleration (TBA) beam line design  
-		\item Installed OPAL-T on two Linux clusters at ANL: Bebop and Theta
+		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerator physics.
+		\item Large ensemble HPC simulation work (i.e. 10's of thousands of simulations per batch job).
+		\item Collaborating with Andreas Adelmann (PSI) on using surrogate models for parameter space definition.
+		\item High charge linac optimization (40 nC) using nlopt python package.
+		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
 		\item Wrote beam image processing script in python.
-		\item High charge linac optimization (40 nC).
-		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms.
-		\item Wrote optimization scripts in python using nlopt package.
-		\item Optical Transistion Radiation (OTR) at 1nC
-		\item Thermionic RF gun, designed by Euclid TechLabs
+		\item Two beam acceleration (TBA) beam line design using OPAL-T.
+		\item Optical Transistion Radiation (OTR) at 1nC.
+		\item Thermionic RF gun, designed by Euclid TechLabs.
 	\end{itemize}
-	\item Experimental and hardware:
+	\item Experimental:
 	\begin{itemize}%		
 		\item Beam size, charge, and energy measurements
 		\item RF power measurements for linac tanks and gun.
@@ -106,14 +172,19 @@ Experimental validation of results. Completed and ongoing work includes:
 %\bibliographystyle{plain}
 %\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
+\nociteinprog{*}
+\bibliographystyleinprog{ieeetr}
+\bibliographyinprog{./cvparts/inprog}
+
 \nociterefproc{*}
 \bibliographystylerefproc{ieeetr}
 \bibliographyrefproc{./cvparts/refproc}
-%doi :10.1088/1742-6596/874/1/012062
-%\subsection{Submitted Proceedings}
-\nociteproc{*}
-\bibliographystyleproc{ieeetr}
-\bibliographyproc{./cvparts/proceedings}
+
+%\nociteproc{*}
+%\bibliographystyleproc{ieeetr}
+%\bibliographyproc{./cvparts/proceedings}
+
+
 
 \section{Research Presentations}
 
@@ -134,9 +205,18 @@ Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016
 \textbf{Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
 Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 2016 
 
+\section{Awards}
+\cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Dircetor's Discretionary Allocation}{ 2018}{}{}%}
+\cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
+\cventry{}{Funds granted to travel and present work at IPAC 2017 in Denmark.}{IPAC 2017 Travel Award}{May 2017}{}{}%}
+\cventry{}{Funds granted to attend a short course on beam dynamics at NAPAC 2016.}{Phelps Grant Award}{Nov 2016}{}{}%}
+\cventry{}{One year grant funded by DOE; for TBA work done at ANL.}{Science Graduate Student Research Award}{2015--2016}{}{}%}
+
+\section{Programming Languages}
+\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
 
 \section{Teaching}
-\cventry{East Lansing, MI}{Co-instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
+%\cventry{East Lansing, MI}{Co-instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
 
 \cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
 
@@ -148,16 +228,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
-\section{Awards}
-\cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{Dircetor's Discretionary Allocation}{ 2018}{}{}%}
-\cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
-\cventry{}{Funds granted to travel and present work at IPAC 2017 in Denmark.}{IPAC 2017 Travel Award}{May 2017}{}{}%}
-\cventry{}{Funds granted to attend a short course on beam dynamics at NAPAC 2016.}{Phelps Grant Award}{Nov 2016}{}{}%}
-\cventry{}{One year grant funded by DOE; for TBA work done at ANL.}{Science Graduate Student Research Award}{2015--2016}{}{}%}
-
-\section{Programming Languages}
-\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
-
+\iffalse
 \section{USPAS Courses Taken}
 \begin{itemize}
 	\item {Microwave Measurements and Beam Instrumentation}
@@ -165,11 +236,11 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 	\item {Vacuum Science and Technology}
 	\item {Accelerator Physics Using Maple}
 \end{itemize}
-
+\fi
 
 \section{Recent Volunteer work}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
-\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist}{Oct 2017}{}{}
+\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \href{https://www.adoptaphysicist.org/webdocs/about.cfm}{Adopt}}{Oct 2017}{}{}
 \cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 
@@ -189,39 +260,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 
 \clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\iffalse
-\recipient{USPAS}{Fermilab, MS 125\\Kirk Rd \& Wilson St.\\Batavia, IL  60510}
-\date{August 15, 2017}
-\opening{Dear Sir or Madam,}
-\closing{Thank you,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
 
-I can not exaggerate the positive impact that USPAS has had on my graduate eduction and training, 
-as each class provided crucial information that expanded my knowledge of accelerator physics. 
-USPAS is unique in that it offers education in 
-topics that can not be found at any university, and the lab intensive classes offer hands on training 
-that is hard to come by. In addition to spectacular classes, every breakfast, lunch, homework session, 
-and break is an opportunity to exchange ideas with scientist and engineers from labs across the country and the world.
-These interactions, in combination with the course work, help me learn about what is going on in the field.
-It can also be a time to learn some interesting history!
-
-It is exciting to bring those ideas, new and old, back to my group at the 
-Argonne Wakefield Accelerator (AWA) facility. As a PhD student, I started full time at the AWA 
-after two years of classes. I then spent the next two years doing photoinjector 
-simulations and experiments for the two electron beam lines at the AWA. 
-I've also done UV optics work in order to improve the charge distribution in our bunch trains. 
-The impact of USPAS classes in my work is tangible. The information and resources (the books are great) 
-I acquired at USPAS have helped me find insight in my simulations, understand our timing and rf systems better, 
-and appreciate the difficulty of maintaining a pristine vacuum as most facilities do. This information has helped me 
-as I design a beam line for upcoming two beam acceleration experiments, as I work on our UV laser, and while
-talking to vendors. USPAS has given me training in content and skills that are critical for anyone working
-at an accelerator facility, and I hope to continue learning from this invaluable program.
-
-\makeletterclosing
-\fi 
 
 %\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
