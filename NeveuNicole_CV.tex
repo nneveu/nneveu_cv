@@ -56,7 +56,7 @@
 
 \makelettertitle
 
-As a graduate student in the Argonne Wakefield Accelerator group, 
+As a graduate student in the Argonne Wakefield Accelerator (AWA) group, 
 I spend the majority of my time modeling complex and dynamic particle accelerators on 
 Bebop, a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) at ANL. 
 Prior to Bebop, I was using it's predecessor Blues, and more recently, 
@@ -65,11 +65,12 @@ allocation to extend our work on Theta,
 an Argonne Leadership Computing Facility (ALCF) machine. 
 
 In all of my work on these machines, I use the parallel, open source, and 
-3D Particle-in-cell code OPAL-T. 
+3D particle-in-cell code OPAL-T. 
 This code was chosen for several reasons, the most important being the ability 
 to model space charge effects in 3D. At the AWA, high charge experiments are unique
 in that space charge is a dominating nonlinear effect. This is a regime that most 
-particle accelerator facilities avoid due to the detrimental effects on the beam.
+particle accelerator facilities avoid due to the detrimental effects on the beam 
+and difficulty of control.
 However, there are a class of experiments that can benefit from high charge bunches 
 if modeled and controlled with some degree of accuracy. This is the goal of my research
 at the AWA, to understand and optimize machine parameters for 
@@ -78,15 +79,17 @@ effects that machines everywhere must deal with, such as non-linearities in fiel
 magnets or radio-frequency cavities, non-uniform distributions of the particles as they 
 leave the source, and energy loss through bending elements which effect the trajectories downstream. 
 
-There are two main types of simulations I carry out on these machines; 
-low to mid fidelity large scale ensemble simulations for accelerator optimization,
-and the mid to high fidelity simulations for comparison to experiments. 
-Dimensionality in the optimization work can range from as little as 2 or 3 parameters 
-to 10's of parameters, which creates a large search space. Most of this work is carried
-out using OPAL-T in combination with parallel python code developed by Jeff Larson (ANL) 
+The work I do on Bebop focuses on large scale ensemble optimization simulations
+of the high charge accelerators I described above. 
+Dimensionality can range from as little as 2 parameters 
+to 10's of parameters, which creates a large search space. Most of this work is done 
+with parallel python code developed by Jeff Larson (ANL) 
 and others in the library libEnsemble. These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job. Consider a 1,000 point random sample done for probing a 5-D parameter space; I start hundreds of low fidelity 8 core OPAL jobs on a large allocation.
-As one OPAL simulation is finished (scale of few minutes) a new one is started.
-In this way, we can create the large simulation data sets needed for surrogate models or optimization in a reasonable amount of time. 
+As one OPAL simulation is finished (time scale of few minutes) a new one is started.
+In this way, we can create the large simulation data sets needed for surrogate models or optimization in a reasonable amount of time. I also take advantage of the 
+built in genetic algorithm (GA) and parallel framework that is incorporated into OPAL.
+Again, we submit large numbers of low fidelity simulations and OPAL passes the 
+results to GA to determine the parameters of the next generation. 
 
 The work on Theta focuses on high fidelity simulations, 
 including scaling studies and preparations for a 1:1 simulations
@@ -98,8 +101,8 @@ including scaling studies and preparations for a 1:1 simulations
  other aspects of the code. If reasonble scaling can be achieved this 
  ground work will be used as foundation for an INCITE proposal next year.
  
- While I have learn much about HPC systems and research through collaboration and 
- day to day research activities, as a Physics and first engineering student, 
+ While I have learn much about HPC systems through collaboration and 
+ day to day research activities, as a current physics and then engineering student, 
  I would like the opportunity to learn about CS\&E research in a structured setting.
  I think I would benefit from the exposure to CS concepts from a CS point of view.
 
