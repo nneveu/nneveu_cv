@@ -9,8 +9,8 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{banking}         % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -50,65 +50,77 @@
 
 \recipient{ATPESC Statement of Purpose}{}
 \date{March 15, 2018}
-\opening{To whom it may concern,}
+\opening{}
 \closing{Thank you,}
 \enclosure[Attached]{curriculum vit\ae{}}          
-
 \makelettertitle
+\vspace{-4em}
 
-As a graduate student in the Argonne Wakefield Accelerator (AWA) group, 
-I spend the majority of my time modeling complex and dynamic particle accelerators on 
-Bebop, a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) at ANL. 
-Prior to Bebop, I was using it's predecessor Blues, and more recently, 
-my colleagues and I were rewarded a 2 million core hour Director's Discretionary 
-allocation to extend our work on Theta, 
-an Argonne Leadership Computing Facility (ALCF) machine. 
+As a 5th year graduate student in the Argonne Wakefield Accelerator (AWA) group,
+I have learned most of what I know about HPC systems through collaboration and
+day to day research activities. As a physics and engineering student,
+I would like the opportunity to learn about HPC in a structured setting. 
+I would benefit from several of the topics that will be covered, 
+especially numerical methods and performance analysis techniques. 
+These topics lend well to the research I 
+spend the majority of my time doing, which is the modeling of  
+dynamic particle accelerators on Bebop, a HPC cluster provided by the 
+LCRC at ANL. Prior to Bebop, I was using it's predecessor Blues, and more recently,
+my colleagues and I were awarded a 2 million core hour Director's Discretionary
+allocation to extend our work on Theta,
+an ALCF machine.
+I think this course could help me learn how to use these machines more efficiently 
+and prepare my code for the move exascale in the future.
 
-In all of my work on these machines, I use the parallel, open source, and 
-3D particle-in-cell code OPAL-T. 
-This code was chosen for several reasons, the most important being the ability 
-to model space charge effects in 3D. At the AWA, high charge experiments are unique
-in that space charge is a dominating nonlinear effect. This is a regime that most 
-particle accelerator facilities avoid due to the detrimental effects on the beam 
+Another topic of interest for me is "building community codes for HPC". 
+In all of my work, I use the parallel, open source, and
+3D particle-in-cell code OPAL-T. The developers have been great collaborators.
+Another draw was OPAL's ability to model space charge effects in 3D.
+At the AWA, high charge experiments are unique
+in that space charge is a dominating nonlinear effect. This is a regime that most
+particle accelerator facilities avoid due to the detrimental effects on the beam
 and difficulty of control.
-However, there are a class of experiments that can benefit from high charge bunches 
-if modeled and controlled with some degree of accuracy. This is the goal of my research
-at the AWA, to understand and optimize machine parameters for 
-this non-linear regime. This in combination with other higher order collective 
-effects that machines everywhere must deal with, such as non-linearities in field maps of 
-magnets or radio-frequency cavities, non-uniform distributions of the particles as they 
-leave the source, and energy loss through bending elements which effect the trajectories downstream. 
+However, there is a class of experiments that can benefit from high charge bunches
+if modeled and controlled with some degree of accuracy. The goal of my research
+at the AWA is to understand and optimize input parameters to accelerators for
+this non-linear regime. This is combined with other higher order effects 
+such as non-linearities in field maps of magnets or radio-frequency cavities, 
+non-uniform distributions of the particles as they leave the source, 
+and energy loss through bending elements.
 
-The work I do on Bebop focuses on large scale ensemble optimization simulations
-of the high charge accelerators I described above. 
-Dimensionality can range from as little as 2 parameters 
-to 10's of parameters, which creates a large search space. Most of this work is done 
-with parallel python code developed by Jeff Larson (ANL) 
-and others in the library libEnsemble. These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job. Consider a 1,000 point random sample done for probing a 5-D parameter space; I start hundreds of low fidelity 8 core OPAL jobs on a large allocation.
+With this in mind, the work I do on Bebop focuses on large scale ensemble optimization simulations
+of the high charge accelerators I described above.
+Dimensionality can range from three to about thirty parameters, 
+in the case of the AWA. For larger machines, the number of parameters could be in the 
+hundreds. I currently look for ways to optimize efficiently in these large search spaces.
+I use parallel python code developed by Jeff Larson (ANL) and others in the library libEnsemble.
+These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job.
+A typical case is a 1,000 point random sample done for probing a 7D parameter space;
+I start hundreds of low fidelity eight core OPAL jobs on a large allocation.
 As one OPAL simulation is finished (time scale of few minutes) a new one is started.
-In this way, we can create the large simulation data sets needed for surrogate models or optimization in a reasonable amount of time. I also take advantage of the 
+In this way, we can create the large low to mid fidelity simulation data sets needed for surrogate models
+or optimization in a reasonable amount of time. 
+A third order surrogate model for a 7D parameter space requires O(16,000) simulations. 
+This was accomplished in less than 8 hours using this method. I also take advantage of the
 built in genetic algorithm (GA) and parallel framework that is incorporated into OPAL.
-Again, we submit large numbers of low fidelity simulations and OPAL passes the 
-results to GA to determine the parameters of the next generation. 
+Again, we submit large numbers of low to mid fidelity simulations and OPAL passes the
+results to GA to determine the parameters of the next generation.
+These results can then be used to narrow the search space and 
+guide where high fidelity simulations are needed.
+These parameters also give guidance to the accelerator operators 
+so that less time is spent hand tuning the machine.
 
-The work on Theta focuses on high fidelity simulations, 
-including scaling studies and preparations for a 1:1 simulations
- (40 billion particles) in collaboration with the UCLA plasma wakefield group. 
- In the case of plasma wakefield simulations, high fidelity simulations are 
- required to reach the level of statistics needed to resolve the plasma behavior.
- We would also like to optimize for KNL, so that the high fidelity simulations
- are more efficient. This requires updates to the FFT, particle push routine, and
- other aspects of the code. If reasonble scaling can be achieved this 
- ground work will be used as foundation for an INCITE proposal next year.
- 
- While I have learn much about HPC systems through collaboration and 
- day to day research activities, as a current physics and then engineering student, 
- I would like the opportunity to learn about CS\&E research in a structured setting.
- I think I would benefit from the exposure to CS concepts from a CS point of view.
+The work on Theta focuses on high fidelity simulations,
+including scaling studies and preparations for 1:1 simulations
+(40 billion particles) in collaboration with the UCLA plasma wakefield group.
+High fidelity simulations are required to resolve the plasma behavior.
+We would also like to optimize for KNL, so that the high fidelity simulations
+are more efficient. This will requires updates to the FFT, particle push routine, 
+and several aspects of the code. If reasonable scaling can be achieved this
+ground work will be used as foundation for an INCITE proposal next year.
 
 
 \makeletterclosing
-
 
 \clearpage
 
@@ -149,8 +161,8 @@ the accelerator physics PIC code, OPAL-T, and experimental validation of results
 		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerator physics.
 		\item Large ensemble HPC simulation work (i.e. 10's of thousands of simulations per batch job).
 		\item Collaborating with Andreas Adelmann (PSI) on using surrogate models for parameter space definition.
-		\item High charge linac optimization (40 nC) using nlopt python package.
 		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
+		\item High charge linac optimization (40 nC) using nlopt python package.
 		\item Wrote beam image processing script in python.
 		\item Two beam acceleration (TBA) beam line design using OPAL-T.
 		\item Optical Transistion Radiation (OTR) at 1nC.
@@ -197,7 +209,7 @@ Space Charge 2017, Darmstadt, Germany. October 6, 2017
 
 \subsection{Seminar and Colloquia}
 %\subsection{Other Talks}
-\textbf{Photoinjector simulations using OPAL-t for the Argonne Wakefield Accelerator}\newline
+\textbf{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator}\newline
 Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
 \vspace{0.3em}
 
