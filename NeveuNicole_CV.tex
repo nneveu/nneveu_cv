@@ -43,86 +43,83 @@
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
-\extrainfo{PhD Candidate, Illinois Institute of Technology}
+\extrainfo{PhD Candidate in Physics, Illinois Institute of Technology \& ANL}
 
 \begin{document}
 
-
+\iffalse
 \recipient{ATPESC Statement of Purpose}{}
 \date{March 15, 2018}
 \opening{}
-\closing{Thank you,}
+\closing{Thanks for your consideration,}
 \enclosure[Attached]{curriculum vit\ae{}}          
 \makelettertitle
 \vspace{-4em}
 
 As a 5th year graduate student in the Argonne Wakefield Accelerator (AWA) group,
 I have learned most of what I know about HPC systems through collaboration and
-day to day research activities. As a physics and engineering student,
-I would like the opportunity to learn about HPC in a structured setting. 
-I would benefit from several of the topics that will be covered, 
+day to day research activities. I would enjoy the opportunity to learn about HPC in a structured setting, as several of the topics covered relate to my current or upcoming research goals, 
 especially numerical methods and performance analysis techniques. 
-These topics lend well to the research I 
-spend the majority of my time doing, which is the modeling of  
+I spend the majority of my time modeling  
 dynamic particle accelerators on Bebop, a HPC cluster provided by the 
 LCRC at ANL. Prior to Bebop, I was using it's predecessor Blues, and more recently,
-my colleagues and I were awarded a 2 million core hour Director's Discretionary
+my colleagues and I were awarded a Director's Discretionary
 allocation to extend our work on Theta,
 an ALCF machine.
-I think this course could help me learn how to use these machines more efficiently 
-and prepare my code for the move exascale in the future.
-
+This course could help me learn how to use these machines more efficiently 
+and prepare for the move exascale in the future.
 Another topic of interest for me is "building community codes for HPC". 
 In all of my work, I use the parallel, open source, and
-3D particle-in-cell code OPAL-T. The developers have been great collaborators.
-Another draw was OPAL's ability to model space charge effects in 3D.
+3D particle-in-cell code OPAL-T. The developers have been great collaborators, 
+and I would like to continue contributing to open source projects in 
+a sustainable and forward thinking way.
+
+Aside from being open source and parallel, I also use OPAL-T for it's ability to model space charge effects in 3D.
 At the AWA, high charge experiments are unique
-in that space charge is a dominating nonlinear effect. This is a regime that most
+in that space charge is the dominating nonlinear effect. This is a regime that most
 particle accelerator facilities avoid due to the detrimental effects on the beam
 and difficulty of control.
 However, there is a class of experiments that can benefit from high charge bunches
 if modeled and controlled with some degree of accuracy. The goal of my research
 at the AWA is to understand and optimize input parameters to accelerators for
-this non-linear regime. This is combined with other higher order effects 
-such as non-linearities in field maps of magnets or radio-frequency cavities, 
+this nonlinear regime. This is combined with other higher order effects 
+such as asymmetries in the field maps of magnets or radio-frequency cavities, 
 non-uniform distributions of the particles as they leave the source, 
 and energy loss through bending elements.
 
-With this in mind, the work I do on Bebop focuses on large scale ensemble optimization simulations
-of the high charge accelerators I described above.
+With this in mind, the work I do on Bebop focuses on large scale ensemble optimization of the high charge accelerators I described above.
 Dimensionality can range from three to about thirty parameters, 
-in the case of the AWA. For larger machines, the number of parameters could be in the 
-hundreds. I currently look for ways to optimize efficiently in these large search spaces.
-I use parallel python code developed by Jeff Larson (ANL) and others in the library libEnsemble.
+for the AWA. For larger machines, the number of parameters could be in the 
+thousands. I look for ways to optimize efficiently in these large search spaces.
+I use parallel python code developed by Jeff Larson (ANL) and others in the library libensemble in combination with generating functions that I write.
 These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job.
-A typical case is a 1,000 point random sample done for probing a 7D parameter space;
-I start hundreds of low fidelity eight core OPAL jobs on a large allocation.
-As one OPAL simulation is finished (time scale of few minutes) a new one is started.
-In this way, we can create the large low to mid fidelity simulation data sets needed for surrogate models
+For a typical 1,000 point random sample done to probe a 7D parameter space,
+I start hundreds of low fidelity eight core OPAL-T jobs on a large allocation.
+As one simulation is finished (time scale of few minutes) a new one is started.
+In this way, we can create the large data sets needed for surrogate models
 or optimization in a reasonable amount of time. 
-A third order surrogate model for a 7D parameter space requires O(16,000) simulations. 
-This was accomplished in less than 8 hours using this method. I also take advantage of the
+A third order surrogate model for a 7D parameter space requires ~16,000 simulations. 
+This was accomplished in less than eight hours using the ensemble method. I also take advantage of the
 built in genetic algorithm (GA) and parallel framework that is incorporated into OPAL.
-Again, we submit large numbers of low to mid fidelity simulations and OPAL passes the
-results to GA to determine the parameters of the next generation.
-These results can then be used to narrow the search space and 
+These low to mid fidelity results can then be used to narrow the search space and 
 guide where high fidelity simulations are needed.
-These parameters also give guidance to the accelerator operators 
+The parameters also give guidance to the accelerator operators 
 so that less time is spent hand tuning the machine.
 
-The work on Theta focuses on high fidelity simulations,
-including scaling studies and preparations for 1:1 simulations
-(40 billion particles) in collaboration with the UCLA plasma wakefield group.
-High fidelity simulations are required to resolve the plasma behavior.
-We would also like to optimize for KNL, so that the high fidelity simulations
-are more efficient. This will requires updates to the FFT, particle push routine, 
-and several aspects of the code. If reasonable scaling can be achieved this
-ground work will be used as foundation for an INCITE proposal next year.
+Our work on Theta focuses on the high fidelity simulations,
+including scaling studies and preparations for realistic, forty billion particle simulations in collaboration with the UCLA plasma wakefield group.
+In this case, high fidelity simulations are required to resolve the plasma behavior.
+We would also like to optimize for KNL. This will requires updates to the FFT, particle push routine, 
+and several aspects of the code. 
+
+In conclusion, based on the description of ATPESC, attendance could greatly 
+impact my current/future research goals and help me become a more efficient HPC user.
 
 
 \makeletterclosing
 
 \clearpage
+\fi
 
 \name{Nicole}{Neveu}
 \title{CV}                               % optional, remove / comment the line if not wanted
@@ -154,27 +151,27 @@ ground work will be used as foundation for an INCITE proposal next year.
 \section{Research Experience}
 \cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{
 Design, optimization, and simulation of rf photoinjectors at AWA using \newline 
-the accelerator physics PIC code, OPAL-T, and experimental validation of results. \newline Completed and ongoing work includes:
+the parallel PIC code, OPAL-T, and experimental validation of results. \newline Completed and ongoing work includes:
 \begin{itemize}%
 	\item Simulations:
 	\begin{itemize}%
-		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerator physics.
-		\item Large ensemble HPC simulation work (i.e. 10's of thousands of simulations per batch job).
-		\item Collaborating with Andreas Adelmann (PSI) on using surrogate models for parameter space definition.
-		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
+		\item Two beam acceleration (TBA) beam line design at 40 nC for AWA (in progress).
+		\item Collaborating with Auralee Edelen and Andreas Adelmann (PSI) on using surrogate models for accelerator simulations.
+		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
+		\item Large ensemble HPC simulations (for work listed above).
 		\item High charge linac optimization (40 nC) using nlopt python package.
-		\item Wrote beam image processing script in python.
-		\item Two beam acceleration (TBA) beam line design using OPAL-T.
-		\item Optical Transistion Radiation (OTR) at 1nC.
-		\item Thermionic RF gun, designed by Euclid TechLabs.
+		\item Optical Transistion Radiation (OTR) simulations at 1 nC.
+		\item Thermionic RF gun simulations, designed by Euclid TechLabs.
+		\item Wrote post processing script in python for transverse beam images.
+		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
 	\end{itemize}
 	\item Experimental:
 	\begin{itemize}%		
-		\item Beam size, charge, and energy measurements
+		\item Beam size, charge, and energy measurements.
 		\item RF power measurements for linac tanks and gun.
-		\item 40nC linac emittance and bunch length measurements.
-		\item Intensity improvement of UV laser pulse train 
-		\item UV multisplitter assembly and characterization
+		\item 40 nC emittance and bunch length measurements.
+		\item Intensity improvement of UV laser pulse train. 
+		\item UV multisplitter assembly and characterization.
 		\item Design of relay imaging transport system for drive beam line.
 	\end{itemize}
 \end{itemize}
@@ -195,9 +192,9 @@ the accelerator physics PIC code, OPAL-T, and experimental validation of results
 \bibliographystylerefproc{ieeetr}
 \bibliographyrefproc{./cvparts/refproc}
 
-%\nociteproc{*}
-%\bibliographystyleproc{ieeetr}
-%\bibliographyproc{./cvparts/proceedings}
+\nociteproc{*}
+\bibliographystyleproc{ieeetr}
+\bibliographyproc{./cvparts/proceedings}
 
 
 
@@ -254,10 +251,11 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \fi
 
 \section{Recent Volunteer work}
-\cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
-\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \href{https://www.adoptaphysicist.org/webdocs/about.cfm}{Adopt}}{Oct 2017}{}{}
-\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
+\cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
+\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
+\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
+
 
 
 \section{Memberships}
