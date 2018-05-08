@@ -17,7 +17,9 @@
 % character encoding
 \usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{hyperref}
-
+\newcommand{\lsedit}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
+\newcommand{\lsnote}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
+\usepackage{multicol}
 % adjust the page margins
 \usepackage[margin=0.7in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
@@ -40,90 +42,23 @@
 \newcites{inprog}{Publications in Progress}
 \newcites{refproc}{Refereed Proceedings}
 \newcites{proc}{Proceedings}
+\newcites{other}{Proceedings}
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
-\extrainfo{PhD Candidate in Physics, Illinois Institute of Technology \& ANL}
+\extrainfo{PhD Candidate in Physics, IIT \& ANL}
 
 \begin{document}
 
 \iftrue
 \recipient{Cover Letter}{}
 \date{April, 2018}
-\opening{}
+\opening{To Whom it May Concern,}
 \closing{Thanks for your consideration,}
 \enclosure[Attached]{curriculum vit\ae{}}          
 \makelettertitle
-\vspace{-4em}
+%\vspace{-4em}
 
-
-One of the aspect of Radiasoft that appeals to me the most is your commitment
-to open source software. I strongly believe that some of the best science 
-is open science, whether that be openely available experiemntal databases 
-or a git repo. The latter being one of my favorite types of version control.
-I think we all as a community can do a better job at documenting and 
-diseminating the work we do in a way that is easily available to all, 
-and understandable to peers.  
-
-
-As a 5th year graduate student in the Argonne Wakefield Accelerator (AWA) group,
-I have learned most of what I know about HPC systems through collaboration and
-day to day research activities. I would enjoy the opportunity to learn about HPC in a structured setting, as several of the topics covered relate to my current or upcoming research goals, 
-especially numerical methods and performance analysis techniques. 
-I spend the majority of my time modeling  
-dynamic particle accelerators on Bebop, a HPC cluster provided by the 
-LCRC at ANL. Prior to Bebop, I was using it's predecessor Blues, and more recently,
-my colleagues and I were awarded a Director's Discretionary
-allocation to extend our work on Theta,
-an ALCF machine.
-This course could help me learn how to use these machines more efficiently 
-and prepare for the move exascale in the future.
-Another topic of interest for me is "building community codes for HPC". 
-In all of my work, I use the parallel, open source, and
-3D particle-in-cell code OPAL-T. The developers have been great collaborators, 
-and I would like to continue contributing to open source projects in 
-a sustainable and forward thinking way.
-
-Aside from being open source and parallel, I also use OPAL-T for it's ability to model space charge effects in 3D.
-At the AWA, high charge experiments are unique
-in that space charge is the dominating nonlinear effect. This is a regime that most
-particle accelerator facilities avoid due to the detrimental effects on the beam
-and difficulty of control.
-However, there is a class of experiments that can benefit from high charge bunches
-if modeled and controlled with some degree of accuracy. The goal of my research
-at the AWA is to understand and optimize input parameters to accelerators for
-this nonlinear regime. This is combined with other higher order effects 
-such as asymmetries in the field maps of magnets or radio-frequency cavities, 
-non-uniform distributions of the particles as they leave the source, 
-and energy loss through bending elements.
-
-With this in mind, the work I do on Bebop focuses on large scale ensemble optimization of the high charge accelerators I described above.
-Dimensionality can range from three to about thirty parameters, 
-for the AWA. For larger machines, the number of parameters could be in the 
-thousands. I look for ways to optimize efficiently in these large search spaces.
-I use parallel python code developed by Jeff Larson (ANL) and others in the library libensemble in combination with generating functions that I write.
-These runs contain multiple parallel instances of OPAL-T initiated and running in the same batch job.
-For a typical 1,000 point random sample done to probe a 7D parameter space,
-I start hundreds of low fidelity eight core OPAL-T jobs on a large allocation.
-As one simulation is finished (time scale of few minutes) a new one is started.
-In this way, we can create the large data sets needed for surrogate models
-or optimization in a reasonable amount of time. 
-A third order surrogate model for a 7D parameter space requires ~16,000 simulations. 
-This was accomplished in less than eight hours using the ensemble method. I also take advantage of the
-built in genetic algorithm (GA) and parallel framework that is incorporated into OPAL.
-These low to mid fidelity results can then be used to narrow the search space and 
-guide where high fidelity simulations are needed.
-The parameters also give guidance to the accelerator operators 
-so that less time is spent hand tuning the machine.
-
-Our work on Theta focuses on the high fidelity simulations,
-including scaling studies and preparations for realistic, forty billion particle simulations in collaboration with the UCLA plasma wakefield group.
-In this case, high fidelity simulations are required to resolve the plasma behavior.
-We would also like to optimize for KNL. This will requires updates to the FFT, particle push routine, 
-and several aspects of the code. 
-
-In conclusion, based on the description of ATPESC, attendance could greatly 
-impact my current/future research goals and help me become a more efficient HPC user.
 
 
 \makeletterclosing
@@ -163,12 +98,12 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \begin{itemize}%
 	\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
 	\begin{itemize}
-		\item Simulation and experimental preparations for implementation of stage TBA at AWA.
+		\item Simulations and experimental preparations for implementation of staged TBA at AWA.
 	\end{itemize}
 	\item Simulations:
 	\begin{itemize}%
 		\item TBA beam line design at 40 nC for AWA (in progress).
-		\item Collaborating with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerator simulations.
+		\item Collaborating with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerators.
 		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
 		\item Large ensemble HPC simulations (for work listed above).
 		\item High charge linac optimization (40 nC) using nlopt python package.
@@ -176,6 +111,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 		\item Simulation of the Euclid Techlabs thermionic gun design.
 		\item Wrote post processing script in python for analyzing transverse beam images.
 		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
+		\item \url{https://github.com/nneveu}
 	\end{itemize}
 	\item Experimental:
 	\begin{itemize}%		
@@ -208,8 +144,6 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \bibliographystyleproc{ieeetr}
 \bibliographyproc{./cvparts/proceedings}
 
-
-
 \section{Research Presentations}
 
 \subsection{Invited Conference or Workshop} %Workshops, Symposium
@@ -230,6 +164,8 @@ Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016
 Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 2016 
 
 \section{Awards}
+\cventry{}{Selected to attend this summer.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{July 2018}{}{}
+
 \cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Dircetor's Discretionary Allocation}{ 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2017 in Denmark.}{IPAC 2017 Travel Award}{May 2017}{}{}%}
@@ -248,6 +184,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 \section{Programming Languages}
 \cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
+
 
 \section{Teaching}
 \cventry{East Lansing, MI}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
@@ -276,7 +213,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
 \cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
-\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
+%\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 
 
 
@@ -284,20 +221,45 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
-\iffalse
+\iftrue
 \section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Linda Spentzouris \item John Power \item Larry Pinsky \end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
+\vspace{1em}
+
+\begin{enumerate}
+	\itemsep1em 
+	\item Linda Spentzouris, IIT
+	\begin{itemize}
+		\item[] Phone: 312.567.3577
+		\item[] Email: linda@agni.phys.iit.edu
+	\end{itemize}
+	\item John Power, HEP-ANL
+	\begin{itemize}
+		\item[] Phone: 630.252.3191
+		\item[] Email: jp@anl.gov
+	\end{itemize}
+	\item Andreas Adelmann, PSI
+	\begin{itemize}
+		\item[] Phone: 41.56.310.4233
+		\item[] Email: andreas.adelmann@psi.ch
+	\end{itemize}
+	\item Jeffrey Larson, MCS-ANL
+	\begin{itemize}
+		\item[] Phone: 630.252.3221
+		\item[] Email: jmlarson@anl.gov
+	\end{itemize}
+	\item Chunguang Jing, Euclid Techlabs, LLC
+	\begin{itemize}
+		\item[] Phone: 630.313.6562
+		\item[] Email: jingchunguang@gmail.com
+	\end{itemize}
+	
+\end{enumerate}
+
 \fi
 
 
 \clearpage
 
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
