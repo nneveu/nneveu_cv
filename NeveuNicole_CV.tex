@@ -19,6 +19,7 @@
 %\usepackage{hyperref}
 \newcommand{\lsedit}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
 \newcommand{\lsnote}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
+\newcommand{\nrnote}[1]{\textsf{{\color{violet}{ NN note:}   #1 }}}
 \usepackage{multicol}
 % adjust the page margins
 \usepackage[margin=0.7in]{geometry}
@@ -50,16 +51,56 @@
 
 \begin{document}
 
-\iftrue
-\recipient{Cover Letter}{}
-\date{April, 2018}
-\opening{To Whom it May Concern,}
-\closing{Thanks for your consideration,}
-\enclosure[Attached]{curriculum vit\ae{}}          
+\iffalse
+\recipient{Accelerator Technology and Applied Physics Division (ATAP)}{Berkeley Lab (LBNL) \\ 1 Cyclotron Road \\ Berkeley, CA 94720}
+\date{May, 2018}
+\opening{To Whom It May Concern,}
+\closing{Thanks for your consideration,\vspace{3em}}
+%\enclosure[Attached]{curriculum vit\ae{}}          
 \makelettertitle
 %\vspace{-4em}
 
+As a PhD candidate in physics at the Illinois Institute of Technology (IIT), 
+I am carrying out my thesis work
+at the Argonne Wakefield Accelerator (AWA) facility. 
+I expect to defend by September 2018, 
+with my thesis centered on beam line design, simulation, optimization, 
+and experimental preparation of staged two beam acceleration (TBA) at the AWA. 
+During this work, 
+I have enjoyed learning about computational accelerator physics. 
+I am interested in the opening to model collective effects at ATAP, because it could give me the opportunity to continue in this field. 
 
+I have modeled both high and low charge photoinjectors at AWA as well as 
+a thermionic gun developed by Euclid Techlabs. My recent simulation 
+work takes place on Bebop, 
+a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) 
+at Argonne National Laboratory (ANL). 
+My primary focus is on beam line design 
+and optimization for high charge (40~nC) TBA experiments.
+I also preform experimental measurements to verify and improve 
+our model and control of high charge beams.
+
+I use the parallel, open source, and 3D particle-in-cell code OPAL-T.  
+I have been collaborating with the developers by contributing to their 
+python tools and aiding in testing of new features.
+I also use the open source parallel python code developed by Jeff Larson (ANL) and others in the library libensemble.  
+I use this library, in combination with generating functions I write 
+to manage multiple parallel instances of OPAL-T running in the same batch job to perform large scale ensemble optimizations or sampling.  
+I have used the built in genetic algorithm and parallel framework that is 
+incorporated into OPAL and the python nlopt package for optimizations. 
+I have also begun investigating surrogate models for accelerators based on supervised learning and polynomial chaos in collaboration with Andreas Adelmann (PSI) and Auralee Edelen (SLAC). 
+The goal of this work is to aid  accelerator operations by
+decreasing the time needed to manually tune the machine.  
+
+
+My colleagues and I have installed OPAL-T on the ANL HPC machines Bebop and Blues. More recently, we were awarded a Director's Discretionary allocation to extend our work on Theta, an Argonne Leadership Computing Facility (ALCF) machine. Our work on Theta focuses on high fidelity simulations,
+including scaling studies and preparations for realistic, one-to-one simulations
+for hand off to QuickPIC simulations in collaboration with the UCLA plasma wakefield group.
+
+My past research experience aligns well with the ongoing work at ATAP.  My aim is to continue learning about the field of computational accelerator physics, and contribute to this field in the future. As my career unfolds, I also hope to continue contributing to open source projects in a sustainable and forward thinking way.
+
+
+\vspace{3em}
 
 \makeletterclosing
 
@@ -140,9 +181,9 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \bibliographystylerefproc{ieeetr}
 \bibliographyrefproc{./cvparts/refproc}
 
-\nociteproc{*}
-\bibliographystyleproc{ieeetr}
-\bibliographyproc{./cvparts/proceedings}
+%\nociteproc{*}
+%\bibliographystyleproc{ieeetr}
+%\bibliographyproc{./cvparts/proceedings}
 
 \section{Research Presentations}
 
@@ -164,7 +205,7 @@ Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016
 Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 2016 
 
 \section{Awards}
-\cventry{}{Selected to attend this summer.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{July 2018}{}{}
+\cventry{}{Selected to attend this summer.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{August 2018}{}{}
 
 \cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Dircetor's Discretionary Allocation}{ 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
@@ -200,28 +241,19 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
 \iffalse
-\section{USPAS Courses Taken}
-\begin{itemize}
-	\item {Microwave Measurements and Beam Instrumentation}
-	\item {Fundamentals of Timing and Synchronization}
-	\item {Vacuum Science and Technology}
-	\item {Accelerator Physics Using Maple}
-\end{itemize}
-\fi
-
 \section{Recent Volunteer work}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
 \cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
 %\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
-
-
+\fi
 
 \section{Memberships}
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
-\iftrue
+
+\iffalse
 \section{References}
 \vspace{1em}
 
@@ -231,11 +263,6 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 	\begin{itemize}
 		\item[] Phone: 312.567.3577
 		\item[] Email: linda@agni.phys.iit.edu
-	\end{itemize}
-	\item John Power, HEP-ANL
-	\begin{itemize}
-		\item[] Phone: 630.252.3191
-		\item[] Email: jp@anl.gov
 	\end{itemize}
 	\item Andreas Adelmann, PSI
 	\begin{itemize}
