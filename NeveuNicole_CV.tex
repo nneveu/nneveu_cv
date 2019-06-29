@@ -1,10 +1,8 @@
-%% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
-
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
@@ -40,6 +38,7 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
+\newcites{papers}{}
 \newcites{inprog}{Publications in Progress}
 \newcites{refproc}{Refereed Proceedings}
 \newcites{proc}{Proceedings}
@@ -47,58 +46,18 @@
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
-\extrainfo{PhD Candidate in Physics, IIT \& ANL}
+\extrainfo{PhD in Physics, IIT \& ANL}
 
 \begin{document}
 
 \iffalse
-\recipient{Accelerator Technology and Applied Physics Division (ATAP)}{Berkeley Lab (LBNL) \\ 1 Cyclotron Road \\ Berkeley, CA 94720}
-\date{May, 2018}
+\recipient{}
+\date{month, year}
 \opening{To Whom It May Concern,}
 \closing{Thanks for your consideration,\vspace{3em}}
 %\enclosure[Attached]{curriculum vit\ae{}}          
 \makelettertitle
 %\vspace{-4em}
-
-As a PhD candidate in physics at the Illinois Institute of Technology (IIT), 
-I am carrying out my thesis work
-at the Argonne Wakefield Accelerator (AWA) facility. 
-I expect to defend by September 2018, 
-with my thesis centered on beam line design, simulation, optimization, 
-and experimental preparation of staged two beam acceleration (TBA) at the AWA. 
-During this work, 
-I have enjoyed learning about computational accelerator physics. 
-I am interested in the opening to model collective effects at ATAP, because it could give me the opportunity to continue in this field. 
-
-I have modeled both high and low charge photoinjectors at AWA as well as 
-a thermionic gun developed by Euclid Techlabs. My recent simulation 
-work takes place on Bebop, 
-a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) 
-at Argonne National Laboratory (ANL). 
-My primary focus is on beam line design 
-and optimization for high charge (40~nC) TBA experiments.
-I also preform experimental measurements to verify and improve 
-our model and control of high charge beams.
-
-I use the parallel, open source, and 3D particle-in-cell code OPAL-T.  
-I have been collaborating with the developers by contributing to their 
-python tools and aiding in testing of new features.
-I also use the open source parallel python code developed by Jeff Larson (ANL) and others in the library libensemble.  
-I use this library, in combination with generating functions I write 
-to manage multiple parallel instances of OPAL-T running in the same batch job to perform large scale ensemble optimizations or sampling.  
-I have used the built in genetic algorithm and parallel framework that is 
-incorporated into OPAL and the python nlopt package for optimizations. 
-I have also begun investigating surrogate models for accelerators based on supervised learning and polynomial chaos in collaboration with Andreas Adelmann (PSI) and Auralee Edelen (SLAC). 
-The goal of this work is to aid  accelerator operations by
-decreasing the time needed to manually tune the machine.  
-
-
-My colleagues and I have installed OPAL-T on the ANL HPC machines Bebop and Blues. More recently, we were awarded a Director's Discretionary allocation to extend our work on Theta, an Argonne Leadership Computing Facility (ALCF) machine. Our work on Theta focuses on high fidelity simulations,
-including scaling studies and preparations for realistic, one-to-one simulations
-for hand off to QuickPIC simulations in collaboration with the UCLA plasma wakefield group.
-
-My past research experience aligns well with the ongoing work at ATAP.  My aim is to continue learning about the field of computational accelerator physics, and contribute to this field in the future. As my career unfolds, I also hope to continue contributing to open source projects in a sustainable and forward thinking way.
-
 
 \vspace{3em}
 
@@ -109,21 +68,21 @@ My past research experience aligns well with the ongoing work at ATAP.  My aim i
 
 \name{Nicole}{Neveu}
 \title{CV}                               % optional, remove / comment the line if not wanted
-\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 %\phone[mobile]{+1~(234)~567~890}                  
-\phone[fixed]{+1~(630)~252~7333}                   
+\phone[fixed]{+1~()~-}                   
 %\phone[fax]{+3~(456)~789~012}                                                  
-\email{nneveu@hawk.iit.edu}
-\extrainfo{nneveu@anl.gov}
+\email{nneveu@slac.stanford.edu}
+\extrainfo{nneveu@stanford.edu}
 \makecvtitle
 
 \section{Education}
-\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--2019}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
 \iffalse
 \section{Ph.D Thesis}
-\cvitem{Title}{\emph{Towards Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
+\cvitem{Title}{\emph{Design for  Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
 \cvitem{Advisors}{Linda Spentzouris, John Power}
 \cvitem{Summary}{
 	I discuss beam line design, simulation, and optimization, of a 
@@ -133,9 +92,14 @@ My past research experience aligns well with the ongoing work at ATAP.  My aim i
 \fi
 
 \section{Research Experience}
-\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{
+\cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate}{2019--Present}{}{
+Optimization and simulation of LCLS and LCLS-II as part of the \newline
+Lightsource Unified Modelling Enviornment (LUME) project.
+\newline}
+
+\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--2019}{}{
 Optimization, and simulation of rf photoinjectors at AWA using 
-the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed and ongoing work includes:
+the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed work includes:
 \begin{itemize}%
 	\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
 	\begin{itemize}
@@ -143,7 +107,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 	\end{itemize}
 	\item Simulations:
 	\begin{itemize}%
-		\item TBA beam line design at 40 nC for AWA (in progress).
+		\item TBA beam line design at 40 nC for AWA.
 		\item Collaborating with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerators.
 		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
 		\item Large ensemble HPC simulations (for work listed above).
@@ -186,13 +150,40 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 %\bibliographyproc{./cvparts/proceedings}
 
 \section{Research Presentations}
-
 \subsection{Invited Conference or Workshop} %Workshops, Symposium
+\textbf{Benchmarking of the LCLS-II Photoinjector}\newline
+NAPAC 2019, East Lansing, MI. September 2019
+\vspace{0.3em}
+
+\textbf{Comparison of Model Based and Heuristic Optimization Algorithms \newline
+	Applied to Photoinjectors Using Libensemble}\newline
+International Computational Accelertor Physics 2018, Key West, FL. October 2018
+\vspace{0.3em}
+
 \textbf{Study of space charge dominated beams at the AWA rf photoinjector}\newline
 Space Charge 2017, Darmstadt, Germany. October 6, 2017
 
 \subsection{Seminar and Colloquia}
 %\subsection{Other Talks}
+\textbf{Fully  Staged Two Beam Acceleration at the Argonne Wakefield Accelerator
+	Facility}\newline
+MIT, Boston, USA. August, 2018
+\vspace{0.3em}
+
+\textbf{Fully  Staged Two Beam Acceleration at the Argonne Wakefield Accelerator
+	Facility}\newline
+SLAC, Menlo Park, CA, USA. July, 2018
+\vspace{0.3em}
+
+\textbf{Fully  Staged Two Beam Acceleration at the Argonne Wakefield Accelerator
+	Facility}\newline
+LANL, Los Alamos, NM, USA. July, 2018
+\vspace{0.3em}
+
+\textbf{Simulations, Optimization, and Experimental Measurements at the AWA}\newline
+RadiaSoft, Boulder, CO, USA. June, 2018
+\vspace{0.3em}
+
 \textbf{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator}\newline
 Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
 \vspace{0.3em}
@@ -228,6 +219,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 
 \section{Teaching}
+\cventry{Albuquerque, NM}{Lab Instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by University of New Mexico}{June 2019}{}{}
+
 \cventry{East Lansing, MI}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
 
 \cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
@@ -281,13 +274,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 	\end{itemize}
 	
 \end{enumerate}
-
 \fi
-
 
 \clearpage
 
 \end{document}
-
-
-%% end of file `template.tex'.
