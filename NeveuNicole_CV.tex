@@ -17,9 +17,6 @@
 % character encoding
 \usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{hyperref}
-\newcommand{\lsedit}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
-\newcommand{\lsnote}[1]{\textsf{{\color{violet}{ LS note:}   #1 }}}
-\newcommand{\nrnote}[1]{\textsf{{\color{violet}{ NN note:}   #1 }}}
 \usepackage{multicol}
 % adjust the page margins
 \usepackage[margin=0.7in]{geometry}
@@ -40,100 +37,53 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
-\newcites{inprog}{Publications in Progress}
+\newcites{art}{Journal Articles}
+\newcites{inprog}{Publications in Preparation}
 \newcites{refproc}{Refereed Proceedings}
 \newcites{proc}{Proceedings}
-\newcites{other}{Proceedings}
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
 \extrainfo{PhD Candidate in Physics, IIT \& ANL}
 
 \begin{document}
-
-\iffalse
-\recipient{Accelerator Technology and Applied Physics Division (ATAP)}{Berkeley Lab (LBNL) \\ 1 Cyclotron Road \\ Berkeley, CA 94720}
-\date{May, 2018}
-\opening{To Whom It May Concern,}
-\closing{Thanks for your consideration,\vspace{3em}}
-%\enclosure[Attached]{curriculum vit\ae{}}          
-\makelettertitle
-%\vspace{-4em}
-
-As a PhD candidate in physics at the Illinois Institute of Technology (IIT), 
-I am carrying out my thesis work
-at the Argonne Wakefield Accelerator (AWA) facility. 
-I expect to defend by September 2018, 
-with my thesis centered on beam line design, simulation, optimization, 
-and experimental preparation of staged two beam acceleration (TBA) at the AWA. 
-During this work, 
-I have enjoyed learning about computational accelerator physics. 
-I am interested in the opening to model collective effects at ATAP, because it could give me the opportunity to continue in this field. 
-
-I have modeled both high and low charge photoinjectors at AWA as well as 
-a thermionic gun developed by Euclid Techlabs. My recent simulation 
-work takes place on Bebop, 
-a HPC cluster provided by the Laboratory Computing Resource Center (LCRC) 
-at Argonne National Laboratory (ANL). 
-My primary focus is on beam line design 
-and optimization for high charge (40~nC) TBA experiments.
-I also preform experimental measurements to verify and improve 
-our model and control of high charge beams.
-
-I use the parallel, open source, and 3D particle-in-cell code OPAL-T.  
-I have been collaborating with the developers by contributing to their 
-python tools and aiding in testing of new features.
-I also use the open source parallel python code developed by Jeff Larson (ANL) and others in the library libensemble.  
-I use this library, in combination with generating functions I write 
-to manage multiple parallel instances of OPAL-T running in the same batch job to perform large scale ensemble optimizations or sampling.  
-I have used the built in genetic algorithm and parallel framework that is 
-incorporated into OPAL and the python nlopt package for optimizations. 
-I have also begun investigating surrogate models for accelerators based on supervised learning and polynomial chaos in collaboration with Andreas Adelmann (PSI) and Auralee Edelen (SLAC). 
-The goal of this work is to aid  accelerator operations by
-decreasing the time needed to manually tune the machine.  
-
-
-My colleagues and I have installed OPAL-T on the ANL HPC machines Bebop and Blues. More recently, we were awarded a Director's Discretionary allocation to extend our work on Theta, an Argonne Leadership Computing Facility (ALCF) machine. Our work on Theta focuses on high fidelity simulations,
-including scaling studies and preparations for realistic, one-to-one simulations
-for hand off to QuickPIC simulations in collaboration with the UCLA plasma wakefield group.
-
-My past research experience aligns well with the ongoing work at ATAP.  My aim is to continue learning about the field of computational accelerator physics, and contribute to this field in the future. As my career unfolds, I also hope to continue contributing to open source projects in a sustainable and forward thinking way.
-
-
-\vspace{3em}
-
-\makeletterclosing
-
-\clearpage
-\fi
-
 \name{Nicole}{Neveu}
 \title{CV}                               % optional, remove / comment the line if not wanted
 \address{9700 Cass Avenue}{Lemont, IL 60439}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 %\phone[mobile]{+1~(234)~567~890}                  
-\phone[fixed]{+1~(630)~252~7333}                   
+\phone[fixed]{+1~(630)~252~7333}
 %\phone[fax]{+3~(456)~789~012}                                                  
 \email{nneveu@hawk.iit.edu}
 \extrainfo{nneveu@anl.gov}
 \makecvtitle
 
 \section{Education}
-\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--Present}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--2018}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
-\iffalse
-\section{Ph.D Thesis}
-\cvitem{Title}{\emph{Towards Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
-\cvitem{Advisors}{Linda Spentzouris, John Power}
-\cvitem{Summary}{
-	I discuss beam line design, simulation, and optimization, of a 
-	beam line with the potential for dielectric two beam acceleration.
-    Preliminary and prepratory experimental measurements
-    are included.    }
-\fi
+
+
 
 \section{Research Experience}
-\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--Present}{}{
+\cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{2018--Present}{}{
+	Optimization, and simulation of rf photoinjectors at AWA using 
+	the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed and ongoing work includes:
+	\begin{itemize}%
+		\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
+		\begin{itemize}
+			\item Simulations and experimental preparations for implementation of staged TBA at AWA.
+		\end{itemize}
+		\item Simulations:
+		\begin{itemize}%
+			\item 
+		\end{itemize}
+		\item Experimental:
+		\begin{itemize}%		
+			\item 
+		\end{itemize}
+	\end{itemize}
+}
+\cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--2018}{}{
 Optimization, and simulation of rf photoinjectors at AWA using 
 the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed and ongoing work includes:
 \begin{itemize}%
@@ -143,7 +93,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 	\end{itemize}
 	\item Simulations:
 	\begin{itemize}%
-		\item TBA beam line design at 40 nC for AWA (in progress).
+		\item TBA beam line design at 40 nC for AWA.
 		\item Collaborating with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerators.
 		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
 		\item Large ensemble HPC simulations (for work listed above).
@@ -173,6 +123,11 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 %\bibliographystyle{plain}
 %\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
+
+\nociteart{*}
+\bibliographystyleart{ieeetr}
+\bibliographyart{./cvparts/art}
+
 \nociteinprog{*}
 \bibliographystyleinprog{ieeetr}
 \bibliographyinprog{./cvparts/inprog}
@@ -181,9 +136,11 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \bibliographystylerefproc{ieeetr}
 \bibliographyrefproc{./cvparts/refproc}
 
-%\nociteproc{*}
-%\bibliographystyleproc{ieeetr}
-%\bibliographyproc{./cvparts/proceedings}
+\nociteproc{*}
+\bibliographystyleproc{ieeetr}
+\bibliographyproc{./cvparts/proceedings}
+
+\newpage
 
 \section{Research Presentations}
 
@@ -193,6 +150,24 @@ Space Charge 2017, Darmstadt, Germany. October 6, 2017
 
 \subsection{Seminar and Colloquia}
 %\subsection{Other Talks}
+\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
+MIT, Boston, MA. August 20, 2018 
+\vspace{0.3em}
+
+\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
+SLAC National Accelerator Laboratory, Menlo Park, CA. July 26, 2018 
+\vspace{0.3em}
+
+\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
+Los Alamos National Laboratory, Los Alamos, NM. July 24, 2018 
+\vspace{0.3em}
+
+\textbf{Simulations, Optimization, and Experimental Measurements at the AWA}\newline
+RadiaSoft, Boulder, CO. June 29, 2018 
+\vspace{0.3em}
+
+
+
 \textbf{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator}\newline
 Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
 \vspace{0.3em}
@@ -206,6 +181,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 \section{Awards}
 \cventry{}{Selected to attend this summer.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{August 2018}{}{}
+
+\cventry{}{Funds granted to travel and present work at AAC 2018.}{AAC 2018 Student Grant}{August 2018}{}{}
 
 \cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Dircetor's Discretionary Allocation}{ 2018}{}{}%}
 \cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Travel Award}{April 2018}{}{}%}
@@ -223,12 +200,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \end{itemize}
 
 
-\section{Programming Languages}
-\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
-
-
 \section{Teaching}
-\cventry{East Lansing, MI}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
+\cventry{East Lansing, MI}{TA \& Guest Lecturer, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
 
 \cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
 
@@ -240,8 +213,14 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
-\iffalse
+
+
+\section{Programming Languages}
+\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
+
+\iftrue
 \section{Recent Volunteer work}
+\cventry{}{Hosted by FNAL, Panel member}{Diversity and Inclusion Panel}{June 2018}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
 \cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
@@ -253,7 +232,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
 
-\iffalse
+\iftrue
 \section{References}
 \vspace{1em}
 
