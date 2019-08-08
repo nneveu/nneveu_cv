@@ -1,10 +1,8 @@
-%% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
-
 
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
@@ -23,12 +21,6 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
                            
-%\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}
-%\phone[fixed]{+1~(630)~252~7333}                               
-%\email{nneveu@hawk.iit.edu}
-%\homepage{www.johndoe.com}                         
-%\quote{Some quote}                                 
-
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
@@ -37,55 +29,64 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
-\newcites{art}{Journal Articles}
 \newcites{inprog}{Publications in Preparation}
+\newcites{art}{.}
 \newcites{refproc}{Refereed Proceedings}
 \newcites{proc}{Proceedings}
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
-\extrainfo{PhD Candidate in Physics, IIT \& ANL}
+\extrainfo{PhD in Physics, SLAC}
 
 \begin{document}
+
+% Place holder for cover letter 
+%\iffalse
+%\recipient{}
+%\date{month, year}
+%\opening{To Whom It May Concern,}
+%\closing{Thanks for your consideration,\vspace{3em}}
+%%\enclosure[Attached]{curriculum vit\ae{}}          
+%\makelettertitle
+%\vspace{3em}
+%\makeletterclosing
+%\clearpage
+%\fi
+
 \name{Nicole}{Neveu}
-\title{CV}                               % optional, remove / comment the line if not wanted
-\address{9700 Cass Avenue}{Lemont, IL 60439}{USA}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-%\phone[mobile]{+1~(234)~567~890}                  
-\phone[fixed]{+1~(630)~252~7333}
-%\phone[fax]{+3~(456)~789~012}                                                  
-\email{nneveu@hawk.iit.edu}
-\extrainfo{nneveu@anl.gov}
+\title{CV}  % optional, remove / comment the line if not wanted
+\address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
+\phone[fixed]{+1~(650)~926-3807}                   
+\email{nneveu@slac.stanford.edu}
+\extrainfo{nneveu@stanford.edu}
 \makecvtitle
 
 \section{Education}
-\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Candidate in Physics}{2013--2018}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{Chicago, IL}{Illinois Institute of Technology}{Ph.D Physics}{2013--2019}{College of Science}{}%{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
 \cventry{Houston, TX}{University of Houston}{B.S. Electrical Engineering}{2009--2013}{Cullen College of Engineering}{}
 
-
-
+\iffalse
+\section{Ph.D Thesis}
+\cvitem{Title}{\emph{Design for  Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}}
+\cvitem{Advisors}{Linda Spentzouris, John Power}
+\cvitem{Summary}{
+	I discuss beam line design, simulation, and optimization, of a 
+	beam line with the potential for dielectric two beam acceleration.
+    Preliminary and prepratory experimental measurements
+    are included.    }
+\fi
 
 \section{Research Experience}
-\cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{2018--Present}{}{
-	Optimization, and simulation of rf photoinjectors at AWA using 
-	the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed and ongoing work includes:
-	\begin{itemize}%
-		\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
-		\begin{itemize}
-			\item Simulations and experimental preparations for implementation of staged TBA at AWA.
-		\end{itemize}
-		\item Simulations:
-		\begin{itemize}%
-			\item 
-		\end{itemize}
-		\item Experimental:
-		\begin{itemize}%		
-			\item 
-		\end{itemize}
-	\end{itemize}
-}
+\cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{2019--Present}{}{
+Optimization and simulation of LCLS and LCLS-II as part of the \newline
+Lightsource Unified Modelling Enviornment (LUME) project. \newline
+This work includes taking experimental measurments to verify simulations.
+\newline}
+
+
 \cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--2018}{}{
 Optimization, and simulation of rf photoinjectors at AWA using 
-the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed and ongoing work includes:
+the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed work includes:
 \begin{itemize}%
 	\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
 	\begin{itemize}
@@ -94,8 +95,8 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 	\item Simulations:
 	\begin{itemize}%
 		\item TBA beam line design at 40 nC for AWA.
-		\item Collaborating with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerators.
-		\item Collaborating with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
+		\item Collaborated with Auralee Edelen (SLAC) and Andreas Adelmann (PSI) on using surrogate models for accelerators.
+		\item Collaborated with Jeff Larson (ANL) on using novel optimization algorithms for accelerators. 
 		\item Large ensemble HPC simulations (for work listed above).
 		\item High charge linac optimization (40 nC) using nlopt python package.
 		\item Optical Transistion Radiation (OTR) simulations at 1 nC.
@@ -106,6 +107,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 	\end{itemize}
 	\item Experimental:
 	\begin{itemize}%		
+		\item Testing of high charge fast rise time kicker
 		\item Beam size, charge, and energy measurements.
 		\item RF power measurements for linac tanks and gun.
 		\item 40 nC emittance and bunch length measurements.
@@ -123,10 +125,9 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 %\bibliographystyle{plain}
 %\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
-
 \nociteart{*}
 \bibliographystyleart{ieeetr}
-\bibliographyart{./cvparts/art}
+\bibliographyart{./cvparts/papers}
 
 \nociteinprog{*}
 \bibliographystyleinprog{ieeetr}
@@ -143,8 +144,16 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \newpage
 
 \section{Research Presentations}
+\subsection{Conference or Workshop} %Workshops, Symposium
+\textbf{Benchmarking of the LCLS-II Photoinjector}\newline
+NAPAC 2019, East Lansing, MI. September 2019
+\vspace{0.3em}
 
-\subsection{Invited Conference or Workshop} %Workshops, Symposium
+\textbf{Comparison of Model Based and Heuristic Optimization Algorithms \newline
+	Applied to Photoinjectors Using Libensemble}\newline
+International Computational Accelertor Physics 2018, Key West, FL. October 2018
+\vspace{0.3em}
+
 \textbf{Study of space charge dominated beams at the AWA rf photoinjector}\newline
 Space Charge 2017, Darmstadt, Germany. October 6, 2017
 
@@ -165,8 +174,6 @@ Los Alamos National Laboratory, Los Alamos, NM. July 24, 2018
 \textbf{Simulations, Optimization, and Experimental Measurements at the AWA}\newline
 RadiaSoft, Boulder, CO. June 29, 2018 
 \vspace{0.3em}
-
-
 
 \textbf{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator}\newline
 Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017 
@@ -190,7 +197,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{}{Funds granted to attend a short course on beam dynamics at NAPAC 2016.}{Phelps Grant Award}{Nov 2016}{}{}%}
 \cventry{}{One year grant funded by DOE; for TBA work done at ANL.}{Science Graduate Student Research Award}{2015--2016}{}{}%}
 
-\cventry{}{Attended the following clases:}{USPAS Scolarships}{2014-2018}{}{}
+\cventry{}{Attended the following classes:}{USPAS Scolarships}{2014-2018}{}{}
 %\section{USPAS Courses Taken}
 \begin{itemize}
 	\item {Microwave Measurements and Beam Instrumentation}
@@ -201,6 +208,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 
 \section{Teaching}
+\cventry{Albuquerque, NM}{Lab Instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by University of New Mexico}{June 2019}{}{}
+
 \cventry{East Lansing, MI}{TA \& Guest Lecturer, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
 
 \cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
@@ -213,26 +222,24 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
-
-
 \section{Programming Languages}
 \cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
 
+\section{Memberships}
+\cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
+\cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
+
 \iftrue
 \section{Recent Volunteer work}
-\cventry{}{Hosted by FNAL, Panel member}{Diversity and Inclusion Panel}{June 2018}{}{}
+\cventry{}{Hosted by SLAC, participated as volunteer}{SAGE-S Summer Camp for Girls}{August 2019}{}{}
+\cventry{}{Hosted by SLAC, participated as volunteer}{CORE Summer Science Institute}{June 2019}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
 \cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
 %\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 \fi
 
-\section{Memberships}
-\cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
-\cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
-
-
-\iftrue
+\iffalse
 \section{References}
 \vspace{1em}
 
@@ -260,13 +267,8 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 	\end{itemize}
 	
 \end{enumerate}
-
 \fi
-
 
 \clearpage
 
 \end{document}
-
-
-%% end of file `template.tex'.
