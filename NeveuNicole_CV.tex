@@ -29,8 +29,8 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
+\newcites{art}{Journal}
 \newcites{inprog}{Publications in Preparation}
-\newcites{art}{Peer Reviewed Journal}
 \newcites{refproc}{Refereed Proceedings}
 \newcites{proc}{Proceedings}
 
@@ -78,10 +78,21 @@
 
 \section{Research Experience}
 \cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{2019--Present}{}{
-Optimization and simulation of LCLS and LCLS-II as part of the \newline
-Lightsource Unified Modelling Enviornment (LUME) project. \newline
-This work includes taking experimental measurments to verify simulations.
-\newline}
+Beam dynamics work focused on LCLS/LCLS-II includes:
+\begin{itemize}
+	\item Experimental
+	\begin{itemize}
+		\item Updating emittance measurement GUI for LCLS-II
+		\item Taking experimental measurments to verify simulations.
+	\end{itemize}
+	\item Simulation
+	\begin{itemize}
+		\item Improving PIC simulation models for LCLS/LCLS-II
+		\item Creating data sets for Machine Learning studies
+		\item Studying effect of Gaussian vs. flattop laser profiles w.r.t photoinjector and FEL performance
+	\end{itemize}
+\end{itemize}
+}
 
 
 \cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--2018}{}{
@@ -117,6 +128,8 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 	\end{itemize}
 \end{itemize}
 }
+
+\newpage
 \section{Publications}
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -141,11 +154,11 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \bibliographystyleproc{ieeetr}
 \bibliographyproc{./cvparts/proceedings}
 
-\newpage
+%\newpage
 
 \section{Research Presentations}
 \subsection{Conference or Workshop} %Workshops, Symposium
-\textbf{Benchmarking of the LCLS-II Photoinjector}\newline
+\textbf{Benchmarking the LCLS-II Photoinjector}\newline
 NAPAC 2019, East Lansing, MI. September 2019
 \vspace{0.3em}
 
@@ -159,6 +172,11 @@ Space Charge 2017, Darmstadt, Germany. October 6, 2017
 
 \subsection{Seminar and Colloquia}
 %\subsection{Other Talks}
+\textbf{Surrogate Modeling for Charged Particle Accelerator Beam Dynamics}\newline
+HZB, Berlin, Germany. April 4, 2019
+\vspace{0.3em}
+
+
 \textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
 MIT, Boston, MA. August 20, 2018 
 \vspace{0.3em}
@@ -186,8 +204,9 @@ Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016
 \textbf{Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
 Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 2016 
 
+\newpage
 \section{Awards}
-\cventry{}{Selected to attend this summer.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{August 2018}{}{}
+\cventry{}{Attend summer 2018.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{August 2018}{}{}
 
 \cventry{}{Funds granted to travel and present work at AAC 2018.}{AAC 2018 Student Grant}{August 2018}{}{}
 
@@ -229,13 +248,15 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
+\newpage
 \iftrue
 \section{Recent Volunteer work}
+\cventry{}{Hosted by SLAC, participated as tour guide}{Community Day}{October 2019}{}{}
 \cventry{}{Hosted by SLAC, participated as volunteer}{SAGE-S Summer Camp for Girls}{August 2019}{}{}
 \cventry{}{Hosted by SLAC, participated as volunteer}{CORE Summer Science Institute}{June 2019}{}{}
+\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017, 2018}{}{}
 \cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
 \cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
-\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{https://www.adoptaphysicist.org/webdocs/about.cfm}{}}{Oct 2017}{}{}
 %\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
 \fi
 
