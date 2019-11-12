@@ -35,25 +35,13 @@
 \newcites{proc}{Proceedings}
 
 %--------------------------------------------------------------------------------
-\name{Nicole}{Neveu}
+\name{N.}{Neveu}
 \extrainfo{PhD in Physics, SLAC}
 
 \begin{document}
 
-% Place holder for cover letter 
-%\iffalse
-%\recipient{}
-%\date{month, year}
-%\opening{To Whom It May Concern,}
-%\closing{Thanks for your consideration,\vspace{3em}}
-%%\enclosure[Attached]{curriculum vit\ae{}}          
-%\makelettertitle
-%\vspace{3em}
-%\makeletterclosing
-%\clearpage
-%\fi
 
-\name{Nicole}{Neveu}
+\name{N.}{Neveu}
 \title{CV}  % optional, remove / comment the line if not wanted
 \address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
 \phone[fixed]{+1~(650)~926-3807}                   
@@ -83,13 +71,16 @@ Beam dynamics work focused on LCLS/LCLS-II includes:
 	\item Experimental
 	\begin{itemize}
 		\item Updating emittance measurement GUI for LCLS-II
+		\item Assiting with Early Injector Commisioning 
 		\item Taking experimental measurments to verify simulations.
 	\end{itemize}
-	\item Simulation
+	\item Simulations
 	\begin{itemize}
 		\item Improving PIC simulation models for LCLS/LCLS-II
+		\item Working closely with others to inform surrogate models
 		\item Creating data sets for Machine Learning studies
-		\item Studying effect of Gaussian vs. flattop laser profiles w.r.t photoinjector and FEL performance
+		\item Studying effect of laser profiles w.r.t photoinjector and FEL performance, \\ this includes Gaussian vs. flattop temporal profiles \\
+		and transverse laser profiles using Virtual Cathode Camera images
 	\end{itemize}
 \end{itemize}
 }
@@ -291,5 +282,21 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \fi
 
 \clearpage
+
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\title{Cover Letter}
+\recipient{Panofsky Fellowship Committee}{SLAC National Accelrator Laboratory\\2575 Sandhill Rd. \\ Menlo Park, CA}
+\date{November 15, 2019}
+\opening{Dear Committee Members,}
+\closing{Sincerly,\vspace{4em}}
+%\enclosure[Attached]{curriculum vit\ae{}}         
+\makelettertitle
+
+\input{cover_letters/panofsky}
+
+
+\makeletterclosing
+
 
 \end{document}
