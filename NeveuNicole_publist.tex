@@ -1,0 +1,87 @@
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}         % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{hyperref}
+\usepackage{multicol}
+% adjust the page margins
+\usepackage[margin=0.7in]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+                           
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+\usepackage[resetlabels,labeled]{multibib}
+\newcites{art}{Journal}
+\newcites{inprog}{Publications in Preparation}
+\newcites{refproc}{Refereed Proceedings}
+\newcites{proc}{Proceedings}
+
+%--------------------------------------------------------------------------------
+\name{Nicole}{Neveu}
+\extrainfo{PhD in Physics, SLAC}
+
+\begin{document}
+
+
+\name{Nicole}{Neveu}
+%\title{CV}  % optional, remove / comment the line if not wanted
+\address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
+\phone[fixed]{+1~(650)~926-3807}                   
+\email{nneveu@slac.stanford.edu}
+\extrainfo{nneveu@stanford.edu}
+\makecvtitle
+
+\section{Publications}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\nociteart{*}
+\bibliographystyleart{ieeetr}
+\bibliographyart{./cvparts/papers} 
+
+\vspace{1em}
+
+\nociteinprog{*}
+\bibliographystyleinprog{ieeetr}
+\bibliographyinprog{./cvparts/inprog}
+
+\vspace{1em}
+
+
+\nociterefproc{*}
+\bibliographystylerefproc{ieeetr}
+\bibliographyrefproc{./cvparts/refproc}
+
+\vspace{1em}
+
+
+\nociteproc{*}
+\bibliographystyleproc{ieeetr}
+\bibliographyproc{./cvparts/sigproceedings}
+
+
+
+
+\end{document}
