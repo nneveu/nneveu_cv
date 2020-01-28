@@ -71,16 +71,20 @@ Beam dynamics work focused on LCLS/LCLS-II includes:
 	\item Experimental
 	\begin{itemize}
 		\item Updating emittance measurement GUI for LCLS-II
-		\item Assiting with Early Injector Commisioning 
-		\item Taking experimental measurments to verify simulations.
+		\item Assiting with Early Injector Commisioning (LCLS-II gun)
+		\item Taking experimental measurments on LCLS-II gun to characterize machine and verify simulations.
 	\end{itemize}
 	\item Simulations
 	\begin{itemize}
 		\item Improving PIC simulation models for LCLS/LCLS-II
 		\item Working closely with others to inform surrogate models
 		\item Creating data sets for Machine Learning studies
-		\item Studying effect of laser profiles w.r.t photoinjector and FEL performance, \\ this includes Gaussian vs. flattop temporal profiles \\
-		and transverse laser profiles using Virtual Cathode Camera images
+		\item Studying effect of laser profiles w.r.t photoinjector and FEL performance
+		\begin{itemize}
+			\item Optimization of beam dynamics for Gaussian temporal profiles for LCLS-II
+			\item Incorporation of transverse laser profiles using Virtual Cathode Camera images
+			\item Simulation optimization and study of general laser profiles
+		\end{itemize} 
 	\end{itemize}
 \end{itemize}
 }
@@ -126,9 +130,6 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 \nociteart{*}
 \bibliographystyleart{ieeetr}
@@ -145,32 +146,8 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \section{Proceedings}
 \nociteproc{*}
 \bibliographystyleproc{ieeetr}
-\bibliographyproc{./cvparts/proceedings}
+\bibliographyproc{./cvparts/proceedings}}
 
-%\newpage
-%\section{Publications}
-%% Publications from a BibTeX file without multibib
-%%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%%\nocite{*}
-%%\bibliographystyle{plain}
-%%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-%
-%\nociteart{*}
-%\bibliographystyleart{ieeetr}
-%\bibliographyart{./cvparts/papers}
-%
-%\nociteinprog{*}
-%\bibliographystyleinprog{ieeetr}
-%\bibliographyinprog{./cvparts/inprog}
-%
-%\nociterefproc{*}
-%\bibliographystylerefproc{ieeetr}
-%\bibliographyrefproc{./cvparts/refproc}
-%
-%\nociteproc{*}
-%\bibliographystyleproc{ieeetr}
-%\bibliographyproc{./cvparts/proceedings}
 %
 \newpage
 
@@ -239,14 +216,14 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{}{Attended the following classes:}{USPAS Scolarships}{2014-2018}{}{}
 %\section{USPAS Courses Taken}
 \begin{itemize}
-	\item {Microwave Measurements and Beam Instrumentation}
-	\item {Fundamentals of Timing and Synchronization}
-	\item {Vacuum Science and Technology}
-	\item {Accelerator Physics Using Maple}
+	\item {Microwave Measurements and Beam Instrumentation, Fundamentals of Timing and Synchronization}
+	\item {Vacuum Science and Technology, Accelerator Physics Using Maple}
 \end{itemize}
 
 
 \section{Teaching}
+\cventry{Stony Brook, NY}{Instructor, Optimization and Machine Learning for Accelerators }{USPAS that will be hosted by Stony Brook University}{June 2020}{}{}
+
 \cventry{Albuquerque, NM}{Lab Instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by University of New Mexico}{June 2019}{}{}
 
 \cventry{East Lansing, MI}{TA \& Guest Lecturer, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
@@ -262,7 +239,7 @@ Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 
 \cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
 
 \section{Programming Languages}
-\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{C/C++, Fortran, Perl, SQL}}
+\cvlistdoubleitem{\cvitem{Proficient in}{OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{IMPACT, ASTRA, C/C++, Fortran, Perl, SQL}}
 
 \section{Memberships}
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
