@@ -1,5 +1,6 @@
 # nneveu_cv
 Nicole Neveu's CV, adapted from Xavier Danaux template:
+https://github.com/xdanaux/moderncv
 
 ```latex
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
