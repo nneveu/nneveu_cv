@@ -18,7 +18,7 @@
 \usepackage{multicol}
 \usepackage{url}
 % adjust the page margins
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -59,7 +59,7 @@
 
 \name{Nicole}{Neveu}
 \title{CV}  % optional, remove / comment the line if not wanted
-\address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
+\address{365 Walker Dr.}{Mountain View, CA 94043}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
 \phone[fixed]{+1~(832)~628-4671}
 \email{nneveu@slac.stanford.edu}
 \extrainfo{nneveu@stanford.edu}
@@ -82,68 +82,51 @@
 
 \section{Research Experience}
 \cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{December 2018--Present}{}{
-Beam dynamics work focused on LCLS/LCLS-II includes:
+Beam dynamics work focused on LCLS/LCLS-II:
 \begin{itemize}
-	\item Experimental
-	\begin{itemize}
-         \item Submitted proposal to Laser Improvement Task force for new termporal laser diagnostic. This will provide a direct measurment of the laser's longitudinal profile.
-		\item Extended emittance measurement GUI for LCLS-II
-		\item Participated in LCLS-II gun commissioning: emittance and beam size measurements, QE maps, etc.
-        \item Took beam measurements on LCLS injector and LCLS-II gun for machine learning models and benchmarking.
-        \item Contributing to and managing repository for general data processing Python tools for LCLS:
-        \begin{itemize}
-            \item \url{https://github.com/slaclab/lcls-tools}
-        \end{itemize}
-    \item Helping with experimental runs at the X-band test facility in TID
-	\end{itemize}
-	\item Simulations
-	\begin{itemize}
-        \item Working with group members on uncertainty quantification analysis of LCLS-II
-        \item Study and optimization of Sum Frequency Generated laser pulses in LCLS-II injector
-        \item Optimization of beam dynamics for Gaussian temporal profiles in LCLS-II commissioning planning
-		\item Incorporation of transverse laser profiles in simulation using Virtual Cathode Camera images
-        \item Working with group members to inform surrogate models (machine learning models)
-        \item Creating simulation and measured data sets for machine learning studies
-        \item Improving PIC simulation models for LCLS/LCLS-II
-        \item Simulation of the X-band test facility in TID to support re-start of facility
-	\end{itemize}
+          \item Study and optimization of Gaussian and Sum Frequency Generated laser pulses in LCLS-II injector.
+          \item Working with group members to create/inform uncertainty quantification and surrogate models (machine learning) of LCLS/LCLS-II.
+         \item Submitted proposal to Laser Improvement task force for new temporal/logitudinal laser diagnostic. %This will provide a direct measurement of the laser's longitudinal profile.
+		\item Extended emittance measurement GUI for LCLS-II.
+		\item Participated in LCLS-II early injector commissioning: emittance and beam size measurements, and QE maps.
+        %\item Took beam measurements on LCLS injector and LCLS-II gun for machine learning models and benchmarking.
+        \item Contributing to and managing repository for general data processing Python tools for LCLS, \hyperlink{https://github.com/slaclab/lcls-tools}{\color{blue}\textbf{lcls-tools}}.
+        %\item Optimization of beam dynamics for Gaussian temporal profiles in LCLS-II commissioning planning.
+		%\item Incorporation of transverse laser profiles in simulation using Virtual Cathode Camera images.
+        %\item Working with group members to inform surrogate models (machine learning models).
+        %\item Creating simulation and measured data sets for machine learning studies.
+        \item Improving PIC simulation models for LCLS/LCLS-II.
+        %\item Simulation of the X-band test facility in TID to support re-start of facility.
+         \item Helping with simulations and experimental runs at the X-band test facility in TID.
 \end{itemize}
 }
 
-\vspace{1em}
+\vspace{0.5em}
 \cventry{Lemont, IL}{Argonne National Laboratory (ANL)}{Graduate Student, Argonne Wakefield Accelerator (AWA)}{2013--2018}{}{
-Optimization, and simulation of rf photoinjectors at AWA using
-the parallel PIC code, OPAL-T, \newline and experimental validation of results. Completed work includes:
+Optimization and simulation of RF photoinjectors at AWA using
+the parallel PIC code, OPAL-T, \newline and experimental validation of results.
 \begin{itemize}%
-	\item Thesis: Design for Staged Two Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
-	\begin{itemize}
-		\item Simulations and experimental preparations for implementation of staged TBA at AWA.
-	\end{itemize}
-	\item Simulations:
-	\begin{itemize}%
-		\item TBA beam line design at 40 nC for AWA.
-		\item Large ensemble HPC simulations.
-		\item High charge linac optimization (40 nC) using nlopt python package.
-		\item Optical Transition Radiation (OTR) simulations at 1 nC.
+	\item Thesis: Design for Staged Two-Beam Acceleration (TBA) at the Argonne Wakefield Accelerator
+	%\item Simulations:
+		%\item TBA beam line design at 40 nC for AWA.
+		%\item Large ensemble HPC simulations.
+		\item High charge HPC linac optimization (40 nC) using NLopt Python package.
+		\item Optical Transition Radiation (OTR) simulations and experiments at 1 nC.
 		\item Simulation of the Euclid Techlabs thermionic gun design.
-		\item Wrote post processing script in python for analyzing transverse beam images.
-		\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
+		\item Wrote post-processing script in Python for analyzing transverse beam images.
+		%\item Built and installed OPAL-T on two Linux clusters at ANL: Bebop and Theta.
 		%\item \url{https://github.com/nneveu}
-	\end{itemize}
-	\item Experimental:
-	\begin{itemize}%
-		\item Testing of high charge fast rise time kicker
-		\item Beam size, charge, and energy measurements.
-		\item RF power measurements for linac tanks and gun.
-		\item 40 nC emittance and bunch length measurements.
-		\item Intensity improvement of UV laser pulse train.
-		\item UV multisplitter assembly and characterization.
-		\item Design of relay imaging transport system for drive beam line.
-	\end{itemize}
+		\item Testing of high charge fast rise time kicker.
+		\item Beam size, charge, energy, emittance, and RF measurements.
+		%\item RF power measurements for linac tanks and gun.
+		%\item 40 nC emittance and bunch length measurements.
+		%\item Intensity improvement of UV laser pulse train.
+		\item UV multisplitter and relay design, assembly, characterization, and improvement.
+		%\item Design of relay imaging transport system for drive beam line.
 \end{itemize}
 }
 
-\newpage
+%\newpage
 
 \section{Publications}
 % Publications from a BibTeX file without multibib
@@ -153,170 +136,112 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results. 
 \nociteart{*}
 \bibliographystyleart{ieeetr}
 \bibliographyart{./cvparts/papers}
-\vspace{0.5em}
+%\vspace{0.5em}
 
 \nociterefproc{*}
 \bibliographystylerefproc{ieeetr}
 \bibliographyrefproc{./cvparts/refproc}
-\vspace{0.5em}
+%\vspace{0.5em}
 
 \nociteinprog{*}
 \bibliographystyleinprog{ieeetr}
 \bibliographyinprog{./cvparts/inprog}
-\vspace{0.5em}
+%\vspace{0.5em}
 
 
 %\section{Proceedings}
 \nociteproc{*}
 \bibliographystyleproc{ieeetr}
 \bibliographyproc{./cvparts/proceedings}
-\vspace{0.5em}
+%\vspace{0.5em}
 %
 %\newpage
 
 \section{Research Presentations}
 \subsection{Conference or Workshop} %Workshops, Symposium
-\textbf{Nonlinear Shaped Laser Pulses in the LCLS-II Photoinjector }\newline
-CLEO, Virtual, Scheduled for May 2021
-\vspace{0.3em}
+\cvitem{}{Nonlinear shaped laser pulses in the LCLS-II photoinjector, \textbf{CLEO 2021}}
+\cvitem{}{Benchmarking the LCLS-II photoinjector, \textbf{NAPAC 2019}}
+\cvitem{}{Surrogate modeling for charged particle accelerator beam dynamics, \textbf{OPAL Retreat 2019}}
+\cvitem{}{Comparison of model based and heuristic optimization algorithms applied to photoinjectors using libensemble, \textbf{ICAP 2018}}
+\cvitem{}{Study of space charge dominated beams at the AWA RF photoinjector, \textbf{Space Charge 2017}}
 
-\textbf{Benchmarking the LCLS-II Photoinjector}\newline
-NAPAC 2019, East Lansing, MI. September 2019
-\vspace{0.3em}
-
-\textbf{Surrogate Modeling for Charged Particle Accelerator Beam Dynamics}\newline
-HZB, Berlin, Germany. April 4, 2019
-\vspace{0.3em}
-
-\textbf{Comparison of Model Based and Heuristic Optimization Algorithms \newline
-	Applied to Photoinjectors Using Libensemble}\newline
-International Computational Accelertor Physics 2018, Key West, FL. October 2018
-\vspace{0.3em}
-
-\textbf{Study of space charge dominated beams at the AWA rf photoinjector}\newline
-Space Charge 2017, Darmstadt, Germany. October 6, 2017
-\vspace{0.3em}
-
-\subsection{Seminar and Colloquia}
-%\subsection{Other Talks}
-
-%\textbf{LCLS-II Optimization}\newline
-%SLAC ARD Seminar, Virtual, December, 2020
-%\vspace{0.3em}
-
-\textbf{Photoinjectors: from wakefields to free electron lasers,\\ and the intersection of math and accelerator physics}\newline
-University of Hawai'i at Manoa, Honolulu, Hawai'i. March 9, 2020
-\vspace{0.3em}
-
-\textbf{Modeling the LCLS-II Injector: from Optimization to Machine Learning}\newline
-Lawrence Berkeley National Laboratory, Berkeley, California. December 6, 2019
-\vspace{0.3em}
-
-%\textbf{Emittance GUI Studies}\newline
-%SLAC National Accelerator Laboratory, Menlo Park, CA. September 26, 2019
-%\vspace{0.3em}
-
-\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
-MIT, Boston, MA. August 20, 2018
-\vspace{0.3em}
-
-\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
-SLAC National Accelerator Laboratory, Menlo Park, CA. July 26, 2018
-\vspace{0.3em}
-
-\textbf{Fully Staged Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
-Los Alamos National Laboratory, Los Alamos, NM. July 24, 2018
-\vspace{0.3em}
-
-\textbf{Simulations, Optimization, and Experimental Measurements at the AWA}\newline
-RadiaSoft, Boulder, CO. June 29, 2018
-\vspace{0.3em}
-
-\textbf{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator}\newline
-Beam Dynamics Palaver AMAS, Paul Scherrer Institute, Villigen, Switzerland. May 23, 2017
-\vspace{0.3em}
-
-\textbf{Research at the Argonne Wakefield Accelerator}\newline
-Young Scientist Symposium, HEP ANL, Lemont, IL. May 17, 2016
-\vspace{0.3em}
-
-\textbf{Two Beam Acceleration at the Argonne Wakefield Accelerator}\newline
-Center for Accelerator and Particle Physics, IIT (CAPP), Chicago, IL. April 28, 2016
-
+\subsection{Select Seminars and Colloquia}
+%\cvitem{}{LCLS-II Optimization, \textbf{SLAC ARD 2020}}
+\cvitem{}{Photoinjectors: from wakefields to free electron lasers, and the intersection of math and accelerator physics, \textbf{University of Hawaii at Manoa 2020}}
+\cvitem{}{Modeling the LCLS-II injector: from optimization to machine learning, \textbf{LBNL 2019}}
+%\cvitem{}{Emittance GUI Studies, \textbf{SLAC AD 2019}}
+\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{MIT 2018}}
+%\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{SLAC 2018}}
+\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{LANL 2018}}
+\cvitem{}{Simulations, optimization, and experimental measurements at the AWA, \textbf{RadiaSoft 2018}}
+\cvitem{}{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator, \textbf{PSI 2017}}
+\cvitem{}{Research at the Argonne Wakefield Accelerator, \textbf{ANL 2016}}
+%\cvitem{}{Two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{IIT Chicago 2016}}
 
 %\newpage
 \section{Awards}
-\cventry{}{Attended summer of 2018.}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{August 2018}{}{}
-\cventry{}{Funds granted to travel and present work at AAC 2018.}{AAC 2018 Student Grant}{August 2018}{}{}
-
-\cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Dircetor's Discretionary Allocation}{ 2018}{}{}%}
-\cventry{}{Funds granted to travel and present work at IPAC 2018 in Canada.}{IPAC 2018 Student Travel Award}{April 2018}{}{}%}
-\cventry{}{Funds granted to travel and present work at IPAC 2017 in Denmark.}{IPAC 2017 Student Travel Award}{May 2017}{}{}%}
-\cventry{}{Funds granted to attend a short course on beam dynamics at NAPAC 2016.}{Phelps Grant Award}{Nov 2016}{}{}%}
-\cventry{}{One year grant funded by DOE; for TBA work done at ANL.}{Science Graduate Student Research Award}{2015--2016}{}{}%}
-
-\cventry{}{Attended the following classes:}{USPAS Scholarships}{2014-2018}{}{}
-%\section{USPAS Courses Taken}
-\begin{itemize}
-	\item {Microwave Measurements and Beam Instrumentation, Fundamentals of Timing and Synchronization}
-	\item {Vacuum Science and Technology, Accelerator Physics Using Maple}
-\end{itemize}
-
-
+\cventry{}{}{SLAC Spot Award for Excellence}{2019}{}{}
+\vspace{-1.5em}
+\cventry{}{}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{ 2018}{}{}
+\vspace{-1.5em}
+\cventry{}{}{AAC 2018 Student Travel Grant}{ 2018}{}{}
+\vspace{-1.5em}
+\cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Director's Discretionary Allocation}{ 2018}{}{}%}
+\cventry{}{}{IPAC 2018 Student Travel Award}{ 2018}{}{}%}
+\vspace{-1.5em}
+\cventry{}{}{IPAC 2017 Student Travel Award}{ 2017}{}{}%}
+\vspace{-1.5em}
+\cventry{}{}{Phelps Short Course Grant Award}{ 2016}{}{}%}
+\vspace{-1.5em}
+\cventry{}{}{Science Graduate Student Research Award}{2015--2016}{}{}%}
+\vspace{-1.5em}
+\cventry{}{}{USPAS Scholarships}{2014-2018}{}{}
+\vspace{-1.5em}
+%\cvlistitem{Microwave Measurements and Beam Instrumentation, Fundamentals of Timing and Synchronization}
+%\cvlistitem{Vacuum Science and Technology, Accelerator Physics Using Maple}
 
 
 %\newpage
 \section{Teaching}
+\cvitemwithcomment{USPAS}{Instructor, UHV Free Electron Lasers }{\textbf{\emph{ 2021}}}
+\cvitemwithcomment{USPAS}{Lab Instructor, Fundamentals of Accelerator Physics and Technology}{\textbf{\emph{ 2019}}}
+\cvitemwithcomment{USPAS}{TA \& Guest Lecturer, Fundamentals of Accelerator Physics and Technology}{\textbf{\emph{ 2018}}}
+\cvitemwithcomment{Vandercook School of Music}{Adjunct, Physics of Sound and Light}{\textbf{\emph{ 2018}}}
+\cvitemwithcomment{Institute of Modern Physics}{TA, Technical English}{\textbf{\emph{ 2017}}}
+\cvitemwithcomment{Tsinghua University}{TA, Technical English}{\textbf{\emph{ 2015-2017}}}
+\cvitemwithcomment{USPAS}{TA, Fundamentals of Accelerator Physics and Technology}{\textbf{\emph{ 2015}}}
+\cvitemwithcomment{IIT Chicago}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{\textbf{\emph{2013-2015}}}
 
-\cventry{Virtual}{Instructor, UHV Free Electron Lasers }{USPAS hosted by Texas A\&M}{January 2021}{}{}
-
-\cventry{Albuquerque, NM}{Lab Instructor, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by University of New Mexico}{June 2019}{}{}
-
-\cventry{East Lansing, MI}{TA \& Guest Lecturer, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Michigan State University}{June 2018}{}{}
-
-\cventry{Chicago, IL}{Adjunct, Physics of Sound and Light}{Vandercook School of Music}{Spring 2018}{}{}%}
-
-\cventry{Lanzhou, China}{TA, Technical English}{Institute of Modern Physics}{July 2017}{}{}%}
-
-\cventry{Beijing, China}{TA, Technical English}{Tsinghua University}{June 2015, 2016, 2017}{}{}%}
-
-\cventry{New Brunswick, NJ}{TA, Fundamentals of Accelerator Physics and Technology}{USPAS hosted by Rutgers University}{June 2015}{}{}
-
-\cventry{Chicago, IL}{TA, Electromagnetism and Optics \& Instrumentation Laboratory}{Illinois Institute of Technology}{2013--2015}{}{}
-
-\section{Mentorship}
-\cvitemwithcomment{Paris Franz}{Graduate student, Stanford University}{2020-Present}
-\cvitemwithcomment{Lipi Gupta}{Graduate student, University of Chicago}{2019-Present}
-\cvitemwithcomment{Mirian Juan}{Graduate student, CSU Long Beach}{2019-Present}
-\cvitemwithcomment{Lucas Berens}{SULI Summer student, Optimization of LCLS-II injector using VCC images}{2020}
-\cvitemwithcomment{Amy Sihn}{SULI Summer student, A Python emittance GUI for LCLS}{2020}
-\cvitemwithcomment{McCay Rhodebeck}{CCI Summer student, lcls-tools Development in Python}{2020}
+\vspace{1em}
 
 
-
-\newpage
-\iftrue
-\section{Recent Volunteer work}
-\cventry{Virtual}{Introduction to Particle Accelerators}{Cabrillo High School STEM Talk}{Feb 2021}{}{}
-\cventry{}{Hosted by SLAC, participated as volunteer}{SAGE-S Summer Camp for Girls}{August 2019, 2020}{}{}
-\cventry{}{Hosted by SLAC, participated as volunteer}{Science Bowl}{January 2020}{}{}
-\cventry{}{Answered questions from high school students online.}{Adopt-a-Physicist: \url{}{}}{Oct 2017, 2018, 2020}{}{\url{https://www.adoptaphysicist.org/webdocs/about.cfm}}
-\cventry{}{Hosted by SLAC, participated as tour guide}{Community Day}{October 2019}{}{}
-
-\cventry{}{Hosted by SLAC, participated as volunteer}{CORE Summer Science Institute}{June 2019}{}{}
-
-\cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
-\cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
-%\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
-
-
-\section{Programming Languages}
-\cvlistdoubleitem{\cvitem{Proficient in}{ASTRA, OPAL-T, Python, Matlab}}{\cvitem{Prior experience with}{IMPACT, Genesis, C/C++}}
+\section{Mentorship \& Volunteer Work}
+Actively involved in mentorship of graduate and summer students, as well as volunteering in educational outreach initiatives like SAGE Summer Camp at SLAC and \hyperlink{https://www.adoptaphysicist.org/}{\color{blue}\textbf{Adopt-a-Physicist}}.
+%\cvitemwithcomment{Paris Franz}{Graduate student, Stanford University}{\textbf{\emph{2020-Present}}}
+%\cvitemwithcomment{Lipi Gupta}{Graduate student, University of Chicago}{\textbf{\emph{2019-Present}}}
+%\cvitemwithcomment{Mirian Juan}{Graduate student, CSU Long Beach}{\textbf{\emph{2019-Present}}}
+%\cvitemwithcomment{Lucas Berens, Amy Sihn, McCay Rhodebeck}{SULI Summer students}{\textbf{\emph{2020}}}
 
 \section{Memberships}
 \cvlistdoubleitem{American Physical Society}{Society of Women Engineers}
 \cvlistdoubleitem{Institute of Electrical and Electronics Engineers}{}
 
+\iffalse
+\section{Recent Volunteer Work}
+\cvitemwithcomment{Feb. 2021}{Cabrillo High School STEM Talk}{}
+\cvitemwithcomment{Aug. 2019}{SAGE-S Summer Camp for Girls, SLAC}{}
+\cvitemwithcomment{Jan. 2020}{Science Bowl, SLAC}{}
+\cvitemwithcomment{Otc. 2017, 2018, 2020}{Adopt-a-Physicist}{}
+%\cvitemwithcomment{Oct. 2019}{Community Day, SLAC}{}
+%\cvitemwithcomment{Jun. 2019}{CORE Summer Science Institute, SLAC}{}
+%\cventry{}{Hosted by ANL, participated as a mentor}{Introduce a girl to engineering day}{April 2017, Feb 2018}{}{}
+%\cventry{}{Visited Spry CLHS and Glenbard East High School.}{Hour of Code}{Dec 2017}{}{}
+%\cventry{}{Monroe School}{Science Fair Judge}{Feb 2017}{}{}
+
+
+\section{Programming Languages}
+\cvitem{Proficient in}{ASTRA, OPAL-T, Python, MATLAB}
+\cvitem{Prior experience with}{IMPACT, Genesis, C/C++}
 
 \fi
 
