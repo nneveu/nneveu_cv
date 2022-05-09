@@ -14,19 +14,13 @@
 
 % character encoding
 \usepackage[utf8]{inputenc} % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{hyperref}
 \usepackage{multicol}
-\usepackage{url}
+%\usepackage{url}
 % adjust the page margins
 \usepackage[margin=0.75in]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 % bibliography with mutiple entries
 \usepackage[resetlabels,labeled]{multibib}
@@ -81,23 +75,32 @@
 \fi
 
 \section{Research Experience}
+\cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Associate Scientist}{October 2021--Present}{}{
+    Work focused on LCLS operations and LCLS-II comissioning:
+    \begin{itemize}
+        \item Taking shifts as program deputy for LCLS
+        \item Writing Higher Order Mode and operating point GUI for the the LCLS-II injector
+         \item Simulation studies of laser offsets on the cathode for LCLS
+        \item Contributing to LCLS-II commissioning shifts
+        \item Continued management of repository for general data processing Python tools for LCLS,\newline \url{https://github.com/slaclab/lcls-tools}.
+    \end{itemize}
+}
+
 \cventry{Menlo Park, CA}{SLAC National Accelerator Laboratory}{Research Associate -- Experimental}{December 2018--Present}{}{
 Beam dynamics work focused on LCLS/LCLS-II:
 \begin{itemize}
-          \item Study and optimization of Gaussian and Sum Frequency Generated laser pulses in LCLS-II injector.
-          \item Working with group members to create/inform uncertainty quantification and surrogate models (machine learning) of LCLS/LCLS-II.
-         \item Submitted proposal to Laser Improvement task force for new temporal/logitudinal laser diagnostic. %This will provide a direct measurement of the laser's longitudinal profile.
+          \item Optimization of Gaussian and Sum Frequency Generated laser pulses in LCLS-II injector.
+          \item Worked with group members to create/inform uncertainty quantification and surrogate models (machine learning) of LCLS/LCLS-II.
+         \item Submitted proposal to Laser Improvement task force for new temporal/logitudinal laser diagnostic.
 		\item Extended emittance measurement GUI for LCLS-II.
 		\item Participated in LCLS-II early injector commissioning: emittance and beam size measurements, and QE maps.
-        %\item Took beam measurements on LCLS injector and LCLS-II gun for machine learning models and benchmarking.
-        \item Contributing to and managing repository for general data processing Python tools for LCLS, \hyperlink{https://github.com/slaclab/lcls-tools}{\color{blue}\textbf{lcls-tools}}.
+        \item Contributed to and managed repository for general data processing Python tools for LCLS, \hyperlink{https://github.com/slaclab/lcls-tools}{\color{blue}\textbf{lcls-tools}}.
         %\item Optimization of beam dynamics for Gaussian temporal profiles in LCLS-II commissioning planning.
 		%\item Incorporation of transverse laser profiles in simulation using Virtual Cathode Camera images.
         %\item Working with group members to inform surrogate models (machine learning models).
         %\item Creating simulation and measured data sets for machine learning studies.
-        \item Improving PIC simulation models for LCLS/LCLS-II.
-        %\item Simulation of the X-band test facility in TID to support re-start of facility.
-         \item Helping with simulations and experimental runs at the X-band test facility in TID.
+        \item Improved PIC simulation models for LCLS/LCLS-II.
+         \item Contributed simulations and experimental runs at the X-band test facility in TID.
 \end{itemize}
 }
 
@@ -126,7 +129,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results.
 \end{itemize}
 }
 
-%\newpage
+\newpage
 
 \section{Publications}
 % Publications from a BibTeX file without multibib
@@ -172,14 +175,14 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results.
 %\cvitem{}{Emittance GUI Studies, \textbf{SLAC AD 2019}}
 \cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{MIT 2018}}
 %\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{SLAC 2018}}
-\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{LANL 2018}}
+%\cvitem{}{Fully staged two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{LANL 2018}}
 \cvitem{}{Simulations, optimization, and experimental measurements at the AWA, \textbf{RadiaSoft 2018}}
 \cvitem{}{Photoinjector simulations using OPAL-T for the Argonne Wakefield Accelerator, \textbf{PSI 2017}}
 \cvitem{}{Research at the Argonne Wakefield Accelerator, \textbf{ANL 2016}}
 %\cvitem{}{Two-beam acceleration at the Argonne Wakefield Accelerator, \textbf{IIT Chicago 2016}}
 
 %\newpage
-\section{Awards}
+\section{Select Awards}
 \cventry{}{}{SLAC Spot Award for Excellence}{2019}{}{}
 \vspace{-1.5em}
 \cventry{}{}{Argonne Training Program on Extreme Scale Computing (ATPESC)}{ 2018}{}{}
@@ -187,8 +190,8 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results.
 \cventry{}{}{AAC 2018 Student Travel Grant}{ 2018}{}{}
 \vspace{-1.5em}
 \cventry{}{Two million core hours awarded on Theta, for work done in collaboration with PSI.}{ANL Director's Discretionary Allocation}{ 2018}{}{}%}
-\cventry{}{}{IPAC 2018 Student Travel Award}{ 2018}{}{}%}
-\vspace{-1.5em}
+%\cventry{}{}{IPAC 2018 Student Travel Award}{ 2018}{}{}%}
+%\vspace{-1.5em}
 \cventry{}{}{IPAC 2017 Student Travel Award}{ 2017}{}{}%}
 \vspace{-1.5em}
 \cventry{}{}{Phelps Short Course Grant Award}{ 2016}{}{}%}
@@ -216,7 +219,7 @@ the parallel PIC code, OPAL-T, \newline and experimental validation of results.
 
 
 \section{Mentorship \& Volunteer Work}
-Actively involved in mentorship of graduate and summer students, as well as volunteering in educational outreach initiatives like SAGE Summer Camp at SLAC and \hyperlink{https://www.adoptaphysicist.org/}{\color{blue}\textbf{Adopt-a-Physicist}}.
+Actively involved in mentorship of graduate and summer students, and co-workers. I also volunteer in educational outreach initiatives at SLAC and Adopt-a-Physicist, \url{https://www.adoptaphysicist.org/}.
 %\cvitemwithcomment{Paris Franz}{Graduate student, Stanford University}{\textbf{\emph{2020-Present}}}
 %\cvitemwithcomment{Lipi Gupta}{Graduate student, University of Chicago}{\textbf{\emph{2019-Present}}}
 %\cvitemwithcomment{Mirian Juan}{Graduate student, CSU Long Beach}{\textbf{\emph{2019-Present}}}
