@@ -17,11 +17,11 @@
 %\usepackage{hyperref}
 \usepackage{multicol}
 % adjust the page margins
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-                           
+
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
@@ -29,11 +29,6 @@
 %\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 % bibliography with mutiple entries
-\usepackage[resetlabels,labeled]{multibib}
-\newcites{art}{Journal}
-\newcites{inprog}{Publications in Preparation}
-\newcites{refproc}{Refereed Proceedings}
-\newcites{proc}{Proceedings}
 
 %--------------------------------------------------------------------------------
 \name{Nicole}{Neveu}
@@ -43,8 +38,8 @@
 
 
 \name{Nicole}{Neveu}
-\address{2575 Sandhill Road}{Menlo Park, CA 94025}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
-\phone[fixed]{+1~(650)~926-3807}                   
+\address{365 Walker Dr.}{Mountain View, CA 94043}{USA}% optional, remove the line if not wanted; the "postcode city"and "country" arguments can be omitted or provided empty
+\phone[fixed]{+1~(832)~628-4671}
 \email{nneveu@slac.stanford.edu}
 \extrainfo{nneveu@stanford.edu}
 %\makecvtitle
@@ -55,14 +50,15 @@
 %-----       letter       ---------------------------------------------------------
 % recipient data
 \title{Cover Letter}
-\recipient{Faculty Hiring Committee}{University of Hawai'i at Manoa\\2500 Campus Rd \\ Honolulu, HI 96822}
-\date{January 22, 2020}
-\opening{Dear Committee Members,}
-\closing{Sincerely,\\ \vspace{1.5em}\includegraphics[width=0.4\linewidth]{NN_signature}}
-
-%\enclosure[Attached]{curriculum vit\ae{}}         
+\recipient{Hiring Committee}{SC Linac Physics Group}
+\date{March 14, 2023}
+\opening{Dear Dan,}
+\closing{Sincerely,\\ \vspace{2em}\includegraphics[width=0.4\linewidth]{NN_signature}}
+\vspace{2em}
+%\enclosure[Attached]{curriculum vit\ae{}}
 \makelettertitle
-\input{cover_letters/cover_letter_hawaii}
+\input{cover_letters/srf}
+
 \makeletterclosing
 
 
